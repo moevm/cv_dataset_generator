@@ -1318,3 +1318,509 @@ LogConfig: Setting CVar [[fx.NiagaraAllowRuntimeScalabilityChanges:1]]
 [2021.02.27-08.54.03:544][341]LogPlayLevel: Display: Destroying online subsystem :Context_16
 [2021.02.27-09.18.27:678][259]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
 [2021.02.27-09.18.27:678][259]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.19.14:624][623]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.19.14:625][623]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.33.36:827][233]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.33.36:827][233]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.34.37:026][114]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.35.00:270][475]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.35.16:501][435]BlueprintLog: New page: Compile AddDevice
+[2021.02.27-09.35.16:564][435]LogUObjectHash: Compacting FUObjectHashTables data took   6.00ms
+[2021.02.27-09.35.17:131][458]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.35.17:154][458]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDeviceB5A7E05E4796FF0F0527CA8D2B9779EA.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.35.17:169][458]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.35.17:169][458]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.35.20:245][638]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.35.20:252][638]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.35.20:265][638]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.35.20:265][638]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.35.20:290][638]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.35.20:290][638]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.35.25:512][933]LogContentBrowser: Deferred new asset file creation: NewWidgetBlueprint
+[2021.02.27-09.35.25:526][933]LogContentBrowser: Creating deferred item: NewWidgetBlueprint
+[2021.02.27-09.35.30:819][251]LogContentBrowser: Attempting asset rename: NewWidgetBlueprint -> NewWidgetBlueprint
+[2021.02.27-09.35.30:825][251]LogContentBrowser: End creating deferred item NewWidgetBlueprint
+[2021.02.27-09.35.31:602][294]LogUObjectHash: Compacting FUObjectHashTables data took   2.91ms
+[2021.02.27-09.35.32:482][294]LogSlate: Window 'Delete Assets' being destroyed
+[2021.02.27-09.35.32:608][294]LogUObjectHash: Compacting FUObjectHashTables data took   2.30ms
+[2021.02.27-09.35.34:156][382]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/DeviceEditor.DeviceEditor
+[2021.02.27-09.36.15:321][746]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.36.15:321][746]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.27-09.37.59:632][779]LogUObjectHash: Compacting FUObjectHashTables data took   3.37ms
+[2021.02.27-09.37.59:635][779]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/SampleLevel' took 0.034
+[2021.02.27-09.37.59:635][779]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/DeviceEditor] ([1] browsable assets)...
+[2021.02.27-09.37.59:635][779]OBJ SavePackage: Finished generating thumbnails for package [/Game/DeviceEditor]
+[2021.02.27-09.37.59:635][779]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/DeviceEditor" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/DeviceEditor_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2021.02.27-09.37.59:666][779]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/DeviceEditor_Auto1DA4C52194CBE8EBB2B231CB582205212.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/DeviceEditor_Auto1.uasset'
+[2021.02.27-09.37.59:667][779]LogFileHelpers: Auto-saving content packages took 0.032
+[2021.02.27-09.38.48:128][308]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/DeviceEditor" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset" SILENT=true
+[2021.02.27-09.38.48:157][308]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/DeviceEditorFC6704654419E40BE104889478CFEA0C.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset'
+[2021.02.27-09.38.48:171][308]AssetCheck: New page: Asset Save: DeviceEditor
+[2021.02.27-09.38.48:171][308]LogContentValidation: Display: Validating WidgetBlueprint /Game/DeviceEditor.DeviceEditor
+[2021.02.27-09.38.49:242][368]LogSlate: Window 'DeviceEditor' being destroyed
+[2021.02.27-09.38.49:252][368]LogSlate: Window 'DeviceEditor' being destroyed
+[2021.02.27-09.38.49:258][368]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.38.49:258][368]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.38.49:277][368]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.38.49:277][368]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.38.51:493][489]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.39.24:282][340]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.40.15:260][294]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.40.17:575][424]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.40.23:365][750]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.40.49:470][205]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.40.49:497][205]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDevice388E9E214008AB6BFD4F81AD5BB07DF4.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.40.49:518][205]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.40.49:518][205]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.40.51:221][299]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.40.51:236][299]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.40.51:242][299]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.40.51:242][299]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.40.51:271][299]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.40.51:272][299]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.40.53:016][380]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.41.39:235][ 61]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.41.43:571][271]LogSlate: Window 'Color Picker' being destroyed
+[2021.02.27-09.41.45:847][393]BlueprintLog: New page: Compile AddDevice
+[2021.02.27-09.41.45:915][393]LogUObjectHash: Compacting FUObjectHashTables data took   4.36ms
+[2021.02.27-09.41.46:700][426]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.41.46:724][426]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDevice676908BA4E0696C8070E25978CC79EA1.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.41.46:741][426]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.41.46:741][426]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.43.38:766][596]LogEditorTransaction: Undo Move Widget
+[2021.02.27-09.43.48:471][127]LogEditorTransaction: Undo Move Widget
+[2021.02.27-09.44.18:870][792]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.44.18:902][792]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDeviceE858514646EEC2500EC426A488D90545.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.44.18:922][792]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.44.18:922][792]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.44.41:442][ 82]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.44.41:468][ 82]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDevice1D5A0C154935FFB404BA7AA69D8B7628.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.44.41:487][ 82]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.44.41:487][ 82]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.45.26:258][ 85]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AddDevice" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset" SILENT=true
+[2021.02.27-09.45.26:282][ 85]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/AddDevice698DB90A492DEA14F3D2B384E87ABB65.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/AddDevice.uasset'
+[2021.02.27-09.45.26:297][ 85]AssetCheck: New page: Asset Save: AddDevice
+[2021.02.27-09.45.26:297][ 85]LogContentValidation: Display: Validating WidgetBlueprint /Game/AddDevice.AddDevice
+[2021.02.27-09.45.28:038][189]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.45.28:045][189]LogSlate: Window 'AddDevice' being destroyed
+[2021.02.27-09.45.28:051][189]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.45.28:051][189]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.45.28:070][189]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.45.28:070][189]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.45.31:276][364]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/DeviceEditor.DeviceEditor
+[2021.02.27-09.53.58:458][909]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/DeviceEditor" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset" SILENT=true
+[2021.02.27-09.53.58:514][909]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/DeviceEditor6719F0034FB3536267B67586019B898D.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset'
+[2021.02.27-09.53.58:539][909]AssetCheck: New page: Asset Save: DeviceEditor
+[2021.02.27-09.53.58:539][909]LogContentValidation: Display: Validating WidgetBlueprint /Game/DeviceEditor.DeviceEditor
+[2021.02.27-09.54.11:580][628]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.02.27-09.54.11:598][628]BlueprintLog: New page: Pre-Play auto-recompile
+[2021.02.27-09.54.11:598][628]LogPlayLevel: [PlayLevel] Compiling AddDevice before play...
+[2021.02.27-09.54.11:631][628]LogPlayLevel: [PlayLevel] Compiling DeviceEditor before play...
+[2021.02.27-09.54.11:753][628]LogUObjectHash: Compacting FUObjectHashTables data took   4.25ms
+[2021.02.27-09.54.11:755][628]LogPlayLevel: PlayLevel: Blueprint regeneration took 157 ms (2 blueprints)
+[2021.02.27-09.54.11:755][628]PIE: New page: PIE session: SampleLevel (27 февр. 2021 г., 15:54:11)
+[2021.02.27-09.54.11:756][628]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_SampleLevel
+[2021.02.27-09.54.11:758][628]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001875s)
+[2021.02.27-09.54.11:759][628]LogAIModule: Creating AISystem for world SampleLevel
+[2021.02.27-09.54.11:760][628]LogPlayLevel: PIE: World Init took: (0.001684s)
+[2021.02.27-09.54.11:760][628]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/SampleLevel.SampleLevel to /Game/UEDPIE_0_SampleLevel.SampleLevel (0.003764s)
+[2021.02.27-09.54.11:791][628]LogUObjectHash: Compacting FUObjectHashTables data took   2.78ms
+[2021.02.27-09.54.11:792][628]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.27-09.54.11:792][628]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.27-09.54.11:792][628]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.27-09.54.11:793][628]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.27-09.54.11:793][628]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.27-09.54.11:796][628]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.27-09.54.11:796][628]LogAudioMixer: Display: 1: FrontRight
+[2021.02.27-09.54.11:878][628]LogAudioMixer: Display: Using Audio Device Динамики (Realtek High Definition Audio)
+[2021.02.27-09.54.11:878][628]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.27-09.54.11:878][628]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.27-09.54.11:878][628]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.27-09.54.11:879][628]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.27-09.54.11:879][628]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.27-09.54.11:879][628]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.27-09.54.11:906][628]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.27-09.54.11:906][628]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.27-09.54.11:906][628]LogInit: FAudioDevice initialized.
+[2021.02.27-09.54.11:906][628]LogAudio: Display: Audio Device (ID: 6) registered with world 'SampleLevel'.
+[2021.02.27-09.54.11:963][628]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-09.54.11:963][628]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-09.54.11:964][628]LogWorld: Bringing World /Game/UEDPIE_0_SampleLevel.SampleLevel up for play (max tick rate 60) at 2021.02.27-12.54.11
+[2021.02.27-09.54.11:965][628]LogWorld: Bringing up level for play took: 0.000580
+[2021.02.27-09.54.11:965][628]LogOnline: OSS: Creating online subsystem instance for: :Context_25
+[2021.02.27-09.54.11:975][628]PIE: Server logged in
+[2021.02.27-09.54.11:978][628]PIE: Play in editor total start time 0,382 seconds.
+[2021.02.27-09.54.12:228][629]LogRenderer: Reallocating scene render targets to support 1536x792 Format 10 NumSamples 1 (Frame:1).
+[2021.02.27-09.54.13:338][672]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-09.54.13:338][672]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-09.54.13:338][672]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2021.02.27-09.54.20:937][979]LogRenderer: Reallocating scene render targets to support 1536x800 Format 10 NumSamples 1 (Frame:352).
+[2021.02.27-09.54.30:108][354]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-09.54.31:597][413]LogSlate: Window 'project Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2021.02.27-09.54.31:613][413]LogWorld: BeginTearingDown for /Game/UEDPIE_0_SampleLevel
+[2021.02.27-09.54.31:614][413]LogWorld: UWorld::CleanupWorld for SampleLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.54.31:614][413]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.54.31:634][413]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.02.27-09.54.31:640][413]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.54.31:676][413]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-09.54.31:679][413]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-09.54.31:731][413]LogUObjectHash: Compacting FUObjectHashTables data took   2.96ms
+[2021.02.27-09.54.31:770][414]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2021.02.27-09.54.51:588][517]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.02.27-09.54.51:607][517]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.02.27-09.54.51:607][517]PIE: New page: PIE session: SampleLevel (27 февр. 2021 г., 15:54:51)
+[2021.02.27-09.54.51:607][517]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_SampleLevel
+[2021.02.27-09.54.51:609][517]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002062s)
+[2021.02.27-09.54.51:611][517]LogAIModule: Creating AISystem for world SampleLevel
+[2021.02.27-09.54.51:611][517]LogPlayLevel: PIE: World Init took: (0.001742s)
+[2021.02.27-09.54.51:611][517]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/SampleLevel.SampleLevel to /Game/UEDPIE_0_SampleLevel.SampleLevel (0.003977s)
+[2021.02.27-09.54.51:645][517]LogUObjectHash: Compacting FUObjectHashTables data took   3.97ms
+[2021.02.27-09.54.51:647][517]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.27-09.54.51:647][517]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.27-09.54.51:647][517]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.27-09.54.51:648][517]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.27-09.54.51:648][517]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.27-09.54.51:650][517]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.27-09.54.51:650][517]LogAudioMixer: Display: 1: FrontRight
+[2021.02.27-09.54.51:741][517]LogAudioMixer: Display: Using Audio Device Динамики (Realtek High Definition Audio)
+[2021.02.27-09.54.51:742][517]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.27-09.54.51:742][517]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.27-09.54.51:742][517]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.27-09.54.51:742][517]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.27-09.54.51:742][517]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.27-09.54.51:742][517]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.27-09.54.51:775][517]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.27-09.54.51:775][517]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.27-09.54.51:775][517]LogInit: FAudioDevice initialized.
+[2021.02.27-09.54.51:775][517]LogAudio: Display: Audio Device (ID: 7) registered with world 'SampleLevel'.
+[2021.02.27-09.54.51:833][517]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-09.54.51:834][517]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-09.54.51:835][517]LogWorld: Bringing World /Game/UEDPIE_0_SampleLevel.SampleLevel up for play (max tick rate 60) at 2021.02.27-12.54.51
+[2021.02.27-09.54.51:836][517]LogWorld: Bringing up level for play took: 0.000956
+[2021.02.27-09.54.51:836][517]LogOnline: OSS: Creating online subsystem instance for: :Context_26
+[2021.02.27-09.54.51:846][517]PIE: Server logged in
+[2021.02.27-09.54.51:850][517]PIE: Play in editor total start time 0,245 seconds.
+[2021.02.27-09.54.53:556][578]LogNet: Browse: /Game/ActualLevel
+[2021.02.27-09.54.53:556][578]LogLoad: LoadMap: /Game/ActualLevel
+[2021.02.27-09.54.53:556][578]LogWorld: BeginTearingDown for /Game/UEDPIE_0_SampleLevel
+[2021.02.27-09.54.53:557][578]LogWorld: UWorld::CleanupWorld for SampleLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.54.53:558][578]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.54.53:588][578]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-09.54.53:592][578]LogUObjectHash: Compacting FUObjectHashTables data took   2.80ms
+[2021.02.27-09.54.53:617][578]LogAudio: Display: Audio Device (ID: 7) registered with world 'ActualLevel'.
+[2021.02.27-09.54.53:618][578]LogAIModule: Creating AISystem for world ActualLevel
+[2021.02.27-09.54.53:619][578]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-09.54.53:621][578]LogWorld: Bringing World /Game/UEDPIE_0_ActualLevel.ActualLevel up for play (max tick rate 60) at 2021.02.27-12.54.53
+[2021.02.27-09.54.53:622][578]LogWorld: Bringing up level for play took: 0.001754
+[2021.02.27-09.54.53:623][578]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2021.02.27-09.54.53:623][578]LogLoad: Took 0.066377 seconds to LoadMap(/Game/ActualLevel)
+[2021.02.27-09.54.57:484][737]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-09.54.57:485][737]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-09.54.57:485][737]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2021.02.27-09.54.58:452][777]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-09.55.08:340][157]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-09.55.09:528][199]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2021.02.27-09.55.09:528][199]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2021.02.27-09.55.10:555][239]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-09.55.10:555][239]LogWorld: BeginTearingDown for /Game/UEDPIE_0_ActualLevel
+[2021.02.27-09.55.10:556][239]LogSlate: Window 'project Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2021.02.27-09.55.10:564][239]LogWorld: UWorld::CleanupWorld for ActualLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-09.55.10:564][239]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.55.10:576][239]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.02.27-09.55.10:584][239]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-09.55.10:620][239]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-09.55.10:621][239]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-09.55.10:623][239]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-09.55.10:673][239]LogUObjectHash: Compacting FUObjectHashTables data took   4.14ms
+[2021.02.27-09.55.10:716][240]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2021.02.27-09.55.44:807][885]LogUObjectHash: Compacting FUObjectHashTables data took   5.73ms
+[2021.02.27-09.55.44:810][885]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/SampleLevel' took 0.048
+[2021.02.27-09.55.44:810][885]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/DeviceEditor] ([1] browsable assets)...
+[2021.02.27-09.55.44:810][885]OBJ SavePackage: Finished generating thumbnails for package [/Game/DeviceEditor]
+[2021.02.27-09.55.44:810][885]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/DeviceEditor" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/DeviceEditor_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2021.02.27-09.55.44:866][885]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/DeviceEditor_Auto2C0F4ABC24B980F31D2332C9AA18F555D.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/DeviceEditor_Auto2.uasset'
+[2021.02.27-09.55.44:867][885]LogFileHelpers: Auto-saving content packages took 0.058
+[2021.02.27-10.21.40:366][148]LogEditorTransaction: Warning: Canceling transaction partially is unsupported. Canceling Resize Widget entirely.
+[2021.02.27-10.21.52:455][803]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/DeviceEditor" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset" SILENT=true
+[2021.02.27-10.21.52:492][803]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/DeviceEditor059220EB40BBB915929F8883E63FBD0D.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/DeviceEditor.uasset'
+[2021.02.27-10.21.52:513][803]AssetCheck: New page: Asset Save: DeviceEditor
+[2021.02.27-10.21.52:513][803]LogContentValidation: Display: Validating WidgetBlueprint /Game/DeviceEditor.DeviceEditor
+[2021.02.27-10.21.53:864][884]BlueprintLog: New page: Compile DeviceEditor
+[2021.02.27-10.21.53:919][884]LogUObjectHash: Compacting FUObjectHashTables data took   3.21ms
+[2021.02.27-10.21.55:279][963]LogSlate: Window 'DeviceEditor' being destroyed
+[2021.02.27-10.21.55:287][963]LogSlate: Window 'DeviceEditor' being destroyed
+[2021.02.27-10.21.55:293][963]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.21.55:293][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.21.55:318][963]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.21.55:319][963]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.22.01:962][332]LogContentBrowser: Deferred new asset file creation: DeviceEditor1
+[2021.02.27-10.22.01:984][332]LogContentBrowser: Creating deferred item: DeviceEditor1
+[2021.02.27-10.22.17:392][257]LogContentBrowser: Attempting asset rename: DeviceEditor1 -> ExistinDeviceList
+[2021.02.27-10.22.17:425][257]LogUObjectHash: Compacting FUObjectHashTables data took   2.82ms
+[2021.02.27-10.22.17:443][257]LogContentBrowser: End creating deferred item DeviceEditor1
+[2021.02.27-10.22.20:063][410]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/ExistinDeviceList.ExistinDeviceList
+[2021.02.27-10.23.05:515][ 83]LogEditorTransaction: Undo Remove Widget
+[2021.02.27-10.23.05:916][ 90]LogEditorTransaction: Undo Remove Widget
+[2021.02.27-10.24.16:751][228]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2021.02.27-10.25.04:170][  2]LogEditorTransaction: Undo Add Widget
+[2021.02.27-10.26.38:725][483]LogEditorTransaction: Undo Edit Horizontal Alignment
+[2021.02.27-10.26.47:469][960]LogEditorTransaction: Undo Edit Horizontal Alignment
+[2021.02.27-10.27.18:895][712]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ExistinDeviceList" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset" SILENT=true
+[2021.02.27-10.27.18:933][712]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/ExistinDeviceListB71339F441D5C57D0AF6F6BADAAADE10.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset'
+[2021.02.27-10.27.18:957][712]AssetCheck: New page: Asset Save: ExistinDeviceList
+[2021.02.27-10.27.18:957][712]LogContentValidation: Display: Validating WidgetBlueprint /Game/ExistinDeviceList.ExistinDeviceList
+[2021.02.27-10.27.19:472][739]BlueprintLog: New page: Compile ExistinDeviceList
+[2021.02.27-10.27.19:541][739]LogUObjectHash: Compacting FUObjectHashTables data took   4.19ms
+[2021.02.27-10.27.51:027][583]BlueprintLog: New page: Compile ExistinDeviceList
+[2021.02.27-10.27.51:069][583]LogUObjectHash: Compacting FUObjectHashTables data took   3.58ms
+[2021.02.27-10.27.51:899][628]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ExistinDeviceList" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset" SILENT=true
+[2021.02.27-10.27.51:936][628]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/ExistinDeviceList7AF44B2E40E94D3A1AB37292DA08D871.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset'
+[2021.02.27-10.27.51:949][628]AssetCheck: New page: Asset Save: ExistinDeviceList
+[2021.02.27-10.27.51:950][628]LogContentValidation: Display: Validating WidgetBlueprint /Game/ExistinDeviceList.ExistinDeviceList
+[2021.02.27-10.27.59:678][ 74]LogSlate: Window 'ExistinDeviceList' being destroyed
+[2021.02.27-10.27.59:692][ 74]LogSlate: Window 'ExistinDeviceList' being destroyed
+[2021.02.27-10.27.59:698][ 74]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.27.59:699][ 74]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.27.59:729][ 74]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.27.59:729][ 74]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.28.05:211][385]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/PauseMenu.PauseMenu
+[2021.02.27-10.29.24:658][969]LogUObjectHash: Compacting FUObjectHashTables data took   4.13ms
+[2021.02.27-10.29.24:660][969]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/SampleLevel' took 0.045
+[2021.02.27-10.29.24:661][969]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/PauseMenu] ([1] browsable assets)...
+[2021.02.27-10.29.24:661][969]OBJ SavePackage: Finished generating thumbnails for package [/Game/PauseMenu]
+[2021.02.27-10.29.24:661][969]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/PauseMenu" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/PauseMenu_Auto3.uasset" SILENT=false AUTOSAVING=true
+[2021.02.27-10.29.24:694][969]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/PauseMenu_Auto34B014D644347168A104A459B7D01FFCE.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/Autosaves/Game/PauseMenu_Auto3.uasset'
+[2021.02.27-10.29.24:695][969]LogFileHelpers: Auto-saving content packages took 0.034
+[2021.02.27-10.30.41:338][472]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2021.02.27-10.31.33:582][454]LogEditorTransaction: Undo Add Node
+[2021.02.27-10.33.07:476][869]LogEditorTransaction: Undo Delete current selection
+[2021.02.27-10.33.07:758][874]LogEditorTransaction: Undo Delete current selection
+[2021.02.27-10.33.08:352][892]LogEditorTransaction: Undo Delete current selection
+[2021.02.27-10.33.52:082][415]BlueprintLog: New page: Compile PauseMenu
+[2021.02.27-10.33.52:132][415]LogUObjectHash: Compacting FUObjectHashTables data took   3.63ms
+[2021.02.27-10.33.54:026][514]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/PauseMenu" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/PauseMenu.uasset" SILENT=true
+[2021.02.27-10.33.54:065][514]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/PauseMenuDC99B98F46C339F8C60843A71F504B51.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/PauseMenu.uasset'
+[2021.02.27-10.33.54:083][514]AssetCheck: New page: Asset Save: PauseMenu
+[2021.02.27-10.33.54:083][514]LogContentValidation: Display: Validating WidgetBlueprint /Game/PauseMenu.PauseMenu
+[2021.02.27-10.33.59:637][834]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.02.27-10.33.59:653][834]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.02.27-10.33.59:654][834]PIE: New page: PIE session: SampleLevel (27 февр. 2021 г., 16:33:59)
+[2021.02.27-10.33.59:654][834]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.33.59:655][834]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001730s)
+[2021.02.27-10.33.59:657][834]LogAIModule: Creating AISystem for world SampleLevel
+[2021.02.27-10.33.59:657][834]LogPlayLevel: PIE: World Init took: (0.001468s)
+[2021.02.27-10.33.59:657][834]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/SampleLevel.SampleLevel to /Game/UEDPIE_0_SampleLevel.SampleLevel (0.003352s)
+[2021.02.27-10.33.59:692][834]LogUObjectHash: Compacting FUObjectHashTables data took   3.43ms
+[2021.02.27-10.33.59:693][834]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.27-10.33.59:693][834]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.27-10.33.59:693][834]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.27-10.33.59:694][834]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.27-10.33.59:694][834]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.27-10.33.59:696][834]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.27-10.33.59:697][834]LogAudioMixer: Display: 1: FrontRight
+[2021.02.27-10.33.59:782][834]LogAudioMixer: Display: Using Audio Device Динамики (Realtek High Definition Audio)
+[2021.02.27-10.33.59:782][834]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.27-10.33.59:782][834]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.27-10.33.59:783][834]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.27-10.33.59:784][834]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.27-10.33.59:784][834]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.27-10.33.59:784][834]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.27-10.33.59:812][834]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.27-10.33.59:812][834]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.27-10.33.59:812][834]LogInit: FAudioDevice initialized.
+[2021.02.27-10.33.59:812][834]LogAudio: Display: Audio Device (ID: 8) registered with world 'SampleLevel'.
+[2021.02.27-10.33.59:871][834]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-10.33.59:871][834]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.33.59:872][834]LogWorld: Bringing World /Game/UEDPIE_0_SampleLevel.SampleLevel up for play (max tick rate 60) at 2021.02.27-13.33.59
+[2021.02.27-10.33.59:873][834]LogWorld: Bringing up level for play took: 0.000428
+[2021.02.27-10.33.59:873][834]LogOnline: OSS: Creating online subsystem instance for: :Context_31
+[2021.02.27-10.33.59:880][834]PIE: Server logged in
+[2021.02.27-10.33.59:884][834]PIE: Play in editor total start time 0,232 seconds.
+[2021.02.27-10.34.01:578][900]LogNet: Browse: /Game/ActualLevel
+[2021.02.27-10.34.01:578][900]LogLoad: LoadMap: /Game/ActualLevel
+[2021.02.27-10.34.01:578][900]LogWorld: BeginTearingDown for /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.34.01:579][900]LogWorld: UWorld::CleanupWorld for SampleLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.34.01:579][900]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.34.01:628][900]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-10.34.01:632][900]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2021.02.27-10.34.01:655][900]LogAudio: Display: Audio Device (ID: 8) registered with world 'ActualLevel'.
+[2021.02.27-10.34.01:657][900]LogAIModule: Creating AISystem for world ActualLevel
+[2021.02.27-10.34.01:657][900]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.34.01:659][900]LogWorld: Bringing World /Game/UEDPIE_0_ActualLevel.ActualLevel up for play (max tick rate 60) at 2021.02.27-13.34.01
+[2021.02.27-10.34.01:660][900]LogWorld: Bringing up level for play took: 0.001724
+[2021.02.27-10.34.01:661][900]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2021.02.27-10.34.01:661][900]LogLoad: Took 0.082184 seconds to LoadMap(/Game/ActualLevel)
+[2021.02.27-10.34.05:717][ 93]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.34.05:717][ 93]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-10.34.05:717][ 93]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2021.02.27-10.34.09:066][246]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2021.02.27-10.34.09:066][246]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2021.02.27-10.34.10:468][313]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.34.10:468][313]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-10.34.10:468][313]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2021.02.27-10.34.12:125][387]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.34.15:031][517]LogScript: Warning: Accessed None trying to read property NewVar_2
+	ExistinDeviceList_C /Engine/Transient.UnrealEdEngine_0:GameInstance_6.PauseMenu_C_0.WidgetTree.ExistinDeviceList_C_0
+	Function /Game/ExistinDeviceList.ExistinDeviceList_C:ExecuteUbergraph_ExistinDeviceList:0025
+[2021.02.27-10.34.15:032][517]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property NewVar_2". Blueprint:  ExistinDeviceList Function:  Execute Ubergraph Existin Device List Graph:  EventGraph Node:  Add to Viewport
+[2021.02.27-10.34.22:659][869]LogSlate: Window 'project Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2021.02.27-10.34.22:679][869]LogWorld: BeginTearingDown for /Game/UEDPIE_0_ActualLevel
+[2021.02.27-10.34.22:680][869]LogWorld: UWorld::CleanupWorld for ActualLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.34.22:680][869]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.34.22:695][869]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.02.27-10.34.22:702][869]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.34.22:740][869]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-10.34.22:741][869]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-10.34.22:744][869]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-10.34.22:800][869]LogUObjectHash: Compacting FUObjectHashTables data took   3.33ms
+[2021.02.27-10.34.22:982][870]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2021.02.27-10.34.35:215][547]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/ExistinDeviceList.ExistinDeviceList
+[2021.02.27-10.35.50:238][405]BlueprintLog: New page: Compile ExistinDeviceList
+[2021.02.27-10.35.50:305][405]LogUObjectHash: Compacting FUObjectHashTables data took   3.82ms
+[2021.02.27-10.35.52:822][519]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/ExistinDeviceList" FILE="../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset" SILENT=true
+[2021.02.27-10.35.52:861][519]LogSavePackage: Moving '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Saved/ExistinDeviceList3C2991324D472BEFB0A92985E6F04FEC.tmp' to '../../../../../!Study/CV_Generator/cv_dataset_generator/project/Content/ExistinDeviceList.uasset'
+[2021.02.27-10.35.52:877][519]AssetCheck: New page: Asset Save: ExistinDeviceList
+[2021.02.27-10.35.52:877][519]LogContentValidation: Display: Validating WidgetBlueprint /Game/ExistinDeviceList.ExistinDeviceList
+[2021.02.27-10.35.57:890][778]LogSlate: Window 'Message Log' being destroyed
+[2021.02.27-10.35.57:900][778]LogSlate: Window 'Message Log' being destroyed
+[2021.02.27-10.35.59:341][849]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.02.27-10.35.59:358][849]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.02.27-10.35.59:358][849]PIE: New page: PIE session: SampleLevel (27 февр. 2021 г., 16:35:59)
+[2021.02.27-10.35.59:358][849]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.35.59:360][849]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001898s)
+[2021.02.27-10.35.59:361][849]LogAIModule: Creating AISystem for world SampleLevel
+[2021.02.27-10.35.59:361][849]LogPlayLevel: PIE: World Init took: (0.001285s)
+[2021.02.27-10.35.59:361][849]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/SampleLevel.SampleLevel to /Game/UEDPIE_0_SampleLevel.SampleLevel (0.003346s)
+[2021.02.27-10.35.59:400][849]LogUObjectHash: Compacting FUObjectHashTables data took   3.45ms
+[2021.02.27-10.35.59:401][849]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2021.02.27-10.35.59:401][849]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.27-10.35.59:401][849]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.27-10.35.59:401][849]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.27-10.35.59:401][849]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.27-10.35.59:401][849]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.27-10.35.59:402][849]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.27-10.35.59:402][849]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.27-10.35.59:402][849]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.27-10.35.59:402][849]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.27-10.35.59:402][849]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.27-10.35.59:404][849]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.27-10.35.59:404][849]LogAudioMixer: Display: 1: FrontRight
+[2021.02.27-10.35.59:483][849]LogAudioMixer: Display: Using Audio Device Динамики (Realtek High Definition Audio)
+[2021.02.27-10.35.59:483][849]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.27-10.35.59:483][849]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.27-10.35.59:483][849]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.27-10.35.59:484][849]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.27-10.35.59:484][849]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.27-10.35.59:484][849]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.27-10.35.59:511][849]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.27-10.35.59:511][849]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.27-10.35.59:511][849]LogInit: FAudioDevice initialized.
+[2021.02.27-10.35.59:511][849]LogAudio: Display: Audio Device (ID: 9) registered with world 'SampleLevel'.
+[2021.02.27-10.35.59:564][849]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-10.35.59:565][849]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.35.59:566][849]LogWorld: Bringing World /Game/UEDPIE_0_SampleLevel.SampleLevel up for play (max tick rate 60) at 2021.02.27-13.35.59
+[2021.02.27-10.35.59:566][849]LogWorld: Bringing up level for play took: 0.000537
+[2021.02.27-10.35.59:566][849]LogOnline: OSS: Creating online subsystem instance for: :Context_34
+[2021.02.27-10.35.59:573][849]PIE: Server logged in
+[2021.02.27-10.35.59:578][849]PIE: Play in editor total start time 0,222 seconds.
+[2021.02.27-10.36.01:541][920]LogNet: Browse: /Game/ActualLevel
+[2021.02.27-10.36.01:541][920]LogLoad: LoadMap: /Game/ActualLevel
+[2021.02.27-10.36.01:541][920]LogWorld: BeginTearingDown for /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.36.01:541][920]LogWorld: UWorld::CleanupWorld for SampleLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.01:541][920]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.01:576][920]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-10.36.01:580][920]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
+[2021.02.27-10.36.01:605][920]LogAudio: Display: Audio Device (ID: 9) registered with world 'ActualLevel'.
+[2021.02.27-10.36.01:607][920]LogAIModule: Creating AISystem for world ActualLevel
+[2021.02.27-10.36.01:607][920]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.36.01:609][920]LogWorld: Bringing World /Game/UEDPIE_0_ActualLevel.ActualLevel up for play (max tick rate 60) at 2021.02.27-13.36.01
+[2021.02.27-10.36.01:610][920]LogWorld: Bringing up level for play took: 0.001668
+[2021.02.27-10.36.01:611][920]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2021.02.27-10.36.01:611][920]LogLoad: Took 0.070568 seconds to LoadMap(/Game/ActualLevel)
+[2021.02.27-10.36.04:318][ 31]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.04:318][ 31]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-10.36.04:318][ 31]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2021.02.27-10.36.05:547][ 81]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.12:227][357]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.13:723][418]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.20:069][664]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.21:045][702]LogNet: Browse: /Game/SampleLevel
+[2021.02.27-10.36.21:045][702]LogLoad: LoadMap: /Game/SampleLevel
+[2021.02.27-10.36.21:045][702]LogWorld: BeginTearingDown for /Game/UEDPIE_0_ActualLevel
+[2021.02.27-10.36.21:046][702]LogWorld: UWorld::CleanupWorld for ActualLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.21:046][702]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.21:092][702]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-10.36.21:097][702]LogUObjectHash: Compacting FUObjectHashTables data took   3.19ms
+[2021.02.27-10.36.21:098][702]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.36.21:100][702]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001923s)
+[2021.02.27-10.36.21:102][702]LogAIModule: Creating AISystem for world SampleLevel
+[2021.02.27-10.36.21:102][702]LogPlayLevel: PIE: World Init took: (0.001503s)
+[2021.02.27-10.36.21:102][702]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/SampleLevel.SampleLevel to /Game/UEDPIE_0_SampleLevel.SampleLevel (0.003635s)
+[2021.02.27-10.36.21:102][702]LogAudio: Display: Audio Device (ID: 9) registered with world 'SampleLevel'.
+[2021.02.27-10.36.21:102][702]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.36.21:103][702]LogWorld: Bringing World /Game/UEDPIE_0_SampleLevel.SampleLevel up for play (max tick rate 60) at 2021.02.27-13.36.21
+[2021.02.27-10.36.21:103][702]LogWorld: Bringing up level for play took: 0.000736
+[2021.02.27-10.36.21:104][702]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.02.27-10.36.21:107][702]LogLoad: Took 0.061476 seconds to LoadMap(/Game/UEDPIE_0_SampleLevel)
+[2021.02.27-10.36.22:285][747]LogNet: Browse: /Game/ActualLevel
+[2021.02.27-10.36.22:285][747]LogLoad: LoadMap: /Game/ActualLevel
+[2021.02.27-10.36.22:285][747]LogWorld: BeginTearingDown for /Game/UEDPIE_0_SampleLevel
+[2021.02.27-10.36.22:286][747]LogWorld: UWorld::CleanupWorld for SampleLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.22:286][747]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.22:323][747]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.27-10.36.22:327][747]LogUObjectHash: Compacting FUObjectHashTables data took   3.03ms
+[2021.02.27-10.36.22:351][747]LogAudio: Display: Audio Device (ID: 9) registered with world 'ActualLevel'.
+[2021.02.27-10.36.22:352][747]LogAIModule: Creating AISystem for world ActualLevel
+[2021.02.27-10.36.22:352][747]LogLoad: Game class is 'FunctionalTestGameMode'
+[2021.02.27-10.36.22:355][747]LogWorld: Bringing World /Game/UEDPIE_0_ActualLevel.ActualLevel up for play (max tick rate 60) at 2021.02.27-13.36.22
+[2021.02.27-10.36.22:355][747]LogWorld: Bringing up level for play took: 0.002123
+[2021.02.27-10.36.22:357][747]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2021.02.27-10.36.22:357][747]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2021.02.27-10.36.22:357][747]LogLoad: Took 0.071755 seconds to LoadMap(/Game/ActualLevel)
+[2021.02.27-10.36.23:783][803]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.23:783][803]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2021.02.27-10.36.23:783][803]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2021.02.27-10.36.24:921][848]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.30:447][ 62]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.02.27-10.36.31:425][101]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2021.02.27-10.36.31:425][101]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2021.02.27-10.36.41:665][465]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.27-10.36.41:665][465]LogWorld: BeginTearingDown for /Game/UEDPIE_0_ActualLevel
+[2021.02.27-10.36.41:666][465]LogSlate: Window 'project Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2021.02.27-10.36.41:674][465]LogWorld: UWorld::CleanupWorld for ActualLevel, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.41:675][465]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.41:693][465]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.02.27-10.36.41:701][465]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.41:742][465]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-10.36.41:744][465]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.27-10.36.41:797][465]LogUObjectHash: Compacting FUObjectHashTables data took   3.92ms
+[2021.02.27-10.36.41:837][466]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2021.02.27-10.36.50:364][920]LogWorld: UWorld::CleanupWorld for World_37, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.50:365][920]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.50:381][920]LogWorld: UWorld::CleanupWorld for World_36, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.50:381][920]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.53:893][108]LogSlate: Window 'ExistinDeviceList' being destroyed
+[2021.02.27-10.36.53:921][108]LogWorld: UWorld::CleanupWorld for World_40, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.53:921][108]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.36.53:951][108]LogWorld: UWorld::CleanupWorld for World_39, bSessionEnded=true, bCleanupResources=true
+[2021.02.27-10.36.53:951][108]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.27-10.37.09:392][  6]LogSlate: Window 'Message Log' being destroyed
+[2021.02.27-10.37.09:398][  6]LogSlate: Window 'Message Log' being destroyed
