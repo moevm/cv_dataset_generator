@@ -1,0 +1,41 @@
+material Yellow
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          colour_op_ex source1 src_manual src_current 1.0 0.95 0.7
+        }
+      } 
+    }
+  }
+
+material Red
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          colour_op_ex source1 src_manual src_current 1.0 0.7 0.7
+        }
+      } 
+    }
+  }
+
+material Grey
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          colour_op_ex source1 src_manual src_current 0.9 0.9 0.9
+        }
+      } 
+    }
+  }
