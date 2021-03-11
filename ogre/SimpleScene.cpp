@@ -109,6 +109,8 @@ public:
     bool keyPressed(const OgreBites::KeyboardEvent& evt) override {
         if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
             getRoot()->queueEndRendering();
+        } else if (evt.keysym.sym == OgreBites::SDLK_SPACE) {
+            getRenderWindow()->writeContentsToFile("./Scene.png");
         } else if (evt.keysym.sym == 'w') {
             camNode->translate(0, 0, -.3);
         } else if (evt.keysym.sym == 's') {
