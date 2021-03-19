@@ -1,5 +1,6 @@
 #include "Ogre.h"
 #include "OgreApplicationContext.h"
+#include "Shpere.hpp"
 
 class SimpleScene : public OgreBites::ApplicationContext, public OgreBites::InputListener {
     Ogre::SceneManager* scnMgr;
@@ -49,8 +50,8 @@ class SimpleScene : public OgreBites::ApplicationContext, public OgreBites::Inpu
     }
 
     void sphere() {
-        Ogre::Entity* sphere =
-            scnMgr->createEntity("Sphere", Ogre::SceneManager::PrefabType::PT_SPHERE);
+        createSphere(scnMgr, "SphereMesh", 50, 64, 64);
+        Ogre::Entity* sphere = scnMgr->createEntity("Sphere", "SphereMesh");
         sphere->setCastShadows(true);
         sphere->setMaterialName("Grey");
 
