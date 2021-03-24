@@ -1,4 +1,23 @@
-# Инструкция по сборке
+# Docker
+
+## Сборка 
+
+```bash
+docker build -t <container> .
+```
+
+## Запуск
+
+```bash
+docker run --network host -e DISPLAY=$DISPLAY <container>
+```
+
+Перед запуском контейнера возможно потребуется выполнить 
+```bash
+xhost local:docker
+```
+
+# Сборка вручную
 
 ## Зависимости
 
@@ -11,10 +30,12 @@ cmake CMakeLists.txt
 make
 ```
 
-# Запуск
+## Запуск
 
 ```bash
 ./SimpleScene
 ```
+
+# Использование
 
 По сцене можно перемещаться с использованием клавиатуры (`WASD` + `QE`). При нажатии на пробел в файл `Scene.png` сохраняется снимок сцены.
