@@ -1,18 +1,25 @@
-#pragma once
-#include "Ogre.h"
+#include "Sphere.hpp"
 
-void createSphere(Ogre::SceneManager* scnMgr,
-                  const std::string& name,
-                  const float r,
-                  const int nRings = 16,
-                  const int nSegments = 16) {
-    using namespace Ogre;
+Sphere::Sphere(View& view)
+    : Entity(view), sphere(view.createEntity(create(view.createManualObject()))) {
+    sphere->setCastShadows(true);
+    sphere->setMaterialName("Grey");
 
-    ManualObject* manual = scnMgr->createManualObject(name);
-    manual->begin("BaseWhiteNoLighting", RenderOperation::OT_TRIANGLE_LIST);
+    sceneNode->setPosition(7, 14, 10);
+    Ogre::Real scale = 0.05;
+    sceneNode->setScale(scale, scale, scale);
+    sceneNode->attachObject(sphere);
+}
 
-    float fDeltaRingAngle = (Math::PI / nRings);
-    float fDeltaSegAngle = (2 * Math::PI / nSegments);
+Ogre::MeshPtr Sphere::create(Ogre::ManualObject* manual) {
+    const float r = 64;
+    const int nRings = 64;
+    const int nSegments = 64;
+
+    manual->begin("BaseWhiteNoLighting", Ogre::RenderOperation::OT_TRIANGLE_LIST);
+
+    float fDeltaRingAngle = (Ogre::Math::PI / nRings);
+    float fDeltaSegAngle = (2 * Ogre::Math::PI / nSegments);
     unsigned short wVerticeIndex = 0;
 
     // Generate the group of rings for the sphere
@@ -27,7 +34,7 @@ void createSphere(Ogre::SceneManager* scnMgr,
 
             // Add one vertex to the strip which makes up the sphere
             manual->position(x0, y0, z0);
-            manual->normal(Vector3(x0, y0, z0).normalisedCopy());
+            manual->normal(Ogre::Vector3(x0, y0, z0).normalisedCopy());
             manual->textureCoord((float)seg / (float)nSegments, (float)ring / (float)nRings);
 
             if (ring != nRings) {
@@ -43,12 +50,15 @@ void createSphere(Ogre::SceneManager* scnMgr,
         }; // end for seg
     }      // end for ring
     manual->end();
-    MeshPtr mesh = manual->convertToMesh(name);
-    mesh->_setBounds(AxisAlignedBox(Vector3(-r, -r, -r), Vector3(r, r, r)), false);
+    Ogre::MeshPtr mesh = manual->convertToMesh(manual->getName());
+    mesh->_setBounds(
+        Ogre::AxisAlignedBox(Ogre::Vector3(-r, -r, -r), Ogre::Vector3(r, r, r)), false);
 
     mesh->_setBoundingSphereRadius(r);
     unsigned short src, dest;
-    if (!mesh->suggestTangentVectorBuildParams(VES_TANGENT, src, dest)) {
-        mesh->buildTangentVectors(VES_TANGENT, src, dest);
+    if (!mesh->suggestTangentVectorBuildParams(Ogre::VES_TANGENT, src, dest)) {
+        mesh->buildTangentVectors(Ogre::VES_TANGENT, src, dest);
     }
+
+    return mesh;
 }
