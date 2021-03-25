@@ -3,13 +3,13 @@
 ## Сборка 
 
 ```bash
-docker build -t <container> .
+docker build -t <image> .
 ```
 
 ## Запуск
 
 ```bash
-docker run --network host -e DISPLAY=$DISPLAY <container>
+docker run --network host -e DISPLAY=$DISPLAY <image>
 ```
 
 Перед запуском контейнера возможно потребуется выполнить 
