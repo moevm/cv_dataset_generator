@@ -13,3 +13,8 @@ Model::Model(View& view)
 void Model::move(Direction direction) {
     camera->move(direction);
 }
+
+void Model::move(Position const& position) {
+    camera->move(position);
+    view.update();
+}

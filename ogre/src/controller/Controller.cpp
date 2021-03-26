@@ -12,7 +12,7 @@ bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
     if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
         view.end();
     } else if (evt.keysym.sym == OgreBites::SDLK_SPACE) {
-        view.save("./Scene.png");
+        view.save("output/scene.png");
     } else if (evt.keysym.sym == 'w') {
         model.move(Direction::FORWARD);
     } else if (evt.keysym.sym == 's') {
@@ -27,4 +27,11 @@ bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
         model.move(Direction::UP);
     }
     return true;
+}
+
+void Controller::moveAlongTrajectory(std::vector<Position> trajectory) {
+    for (int i = 0; i < trajectory.size(); ++i) {
+        model.move(trajectory[i]);
+        view.save("output/scene" + std::to_string(i) + ".png");
+    }
 }

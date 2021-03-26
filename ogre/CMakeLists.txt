@@ -8,6 +8,7 @@ set(CPPS
     src/view/View.cpp 
     src/controller/Controller.cpp
     src/model/Model.cpp
+    src/model/Position.cpp
     src/model/entities/Entity.cpp
     src/model/entities/Camera.cpp
     src/model/entities/Cube.cpp

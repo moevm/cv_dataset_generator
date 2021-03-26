@@ -1,6 +1,6 @@
 #pragma once
 #include "../view/View.hpp"
-#include "Direction.hpp"
+#include "Position.hpp"
 #include "entities/Camera.hpp"
 #include "entities/Cube.hpp"
 #include "entities/Ground.hpp"
@@ -12,6 +12,7 @@ class Model {
 public:
     Model(View&);
     void move(Direction);
+    void move(Position const&);
 
 private:
     View& view;

@@ -21,6 +21,10 @@ void View::save(Ogre::String const& filename) {
     getRenderWindow()->writeContentsToFile(filename);
 }
 
+void View::update() {
+    getRoot()->renderOneFrame();
+}
+
 void View::setup() {
     OgreBites::ApplicationContext::setup();
 
