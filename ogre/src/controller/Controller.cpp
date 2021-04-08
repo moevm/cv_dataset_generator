@@ -1,6 +1,6 @@
 #include "Controller.hpp"
 
-Controller::Controller(Model& model, View& view) : model(model), view(view) {
+Controller::Controller() : view(), model(view) {
     view.init(this);
 }
 

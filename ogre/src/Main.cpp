@@ -1,6 +1,4 @@
 #include "controller/Controller.hpp"
-#include "model/Model.hpp"
-#include "view/View.hpp"
 #include <iostream>
 
 std::vector<Position> getTrajectory() {
@@ -13,9 +11,7 @@ std::vector<Position> getTrajectory() {
 }
 
 int main(int argc, char* argv[]) {
-    View view;
-    Model model(view);
-    Controller controller(model, view);
+    Controller controller;
 
     if (argc > 1)
         controller.moveAlongTrajectory(getTrajectory());

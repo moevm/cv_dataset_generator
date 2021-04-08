@@ -7,13 +7,13 @@
 
 class Controller : public OgreBites::InputListener {
 public:
-    Controller(Model&, View&);
+    Controller();
     ~Controller() override;
     bool keyPressed(const OgreBites::KeyboardEvent&) override;
     // bool mouseMoved(const MouseMotionEvent&) override;
     void moveAlongTrajectory(std::vector<Position>);
 
 private:
-    Model& model;
-    View& view;
+    View view;
+    Model model;
 };
