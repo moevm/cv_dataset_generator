@@ -16,5 +16,4 @@ void Model::move(Direction direction) {
 
 void Model::move(Position const& position) {
     camera->move(position);
-    view.update();
 }

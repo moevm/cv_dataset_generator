@@ -32,6 +32,7 @@ bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
 void Controller::moveAlongTrajectory(std::vector<Position> trajectory) {
     for (int i = 0; i < trajectory.size(); ++i) {
         model.move(trajectory[i]);
+        view.update();
         view.save("output/scene" + std::to_string(i) + ".png");
     }
 }
