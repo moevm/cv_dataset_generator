@@ -1,6 +1,7 @@
 #pragma once
 #include "Ogre.h"
 #include <istream>
+#include <vector>
 
 enum class Direction { FORWARD, BACKWARD, LEFT, RIGHT, UP, DOWN };
 
@@ -15,5 +16,6 @@ struct Position {
 
     Position() = default;
     Position(double, double, double, double, double, double);
+    Position(std::vector<double> const&);
     friend std::istream& operator>>(std::istream&, Position&);
 };

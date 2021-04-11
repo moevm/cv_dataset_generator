@@ -1,7 +1,9 @@
 #include "Controller.hpp"
 
-Controller::Controller() : view(), model(view) {
+Controller::Controller(Config&& config)
+    : view(), model(view), config(std::move(config)) {
     view.init(this);
+    model.move(config.position);
 }
 
 Controller::~Controller() {
@@ -12,7 +14,7 @@ bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
     if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
         view.end();
     } else if (evt.keysym.sym == OgreBites::SDLK_SPACE) {
-        view.save("output/scene.png");
+        view.save(config.outputDir / "scene.png");
     } else if (evt.keysym.sym == 'w') {
         model.move(Direction::FORWARD);
     } else if (evt.keysym.sym == 's') {
@@ -33,6 +35,6 @@ void Controller::moveAlongTrajectory(std::vector<Position> trajectory) {
     for (int i = 0; i < trajectory.size(); ++i) {
         model.move(trajectory[i]);
         view.update();
-        view.save("output/scene" + std::to_string(i) + ".png");
+        view.save(config.outputDir / ("scene" + std::to_string(i) + ".png"));
     }
 }

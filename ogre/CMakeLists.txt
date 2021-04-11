@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 project(SimpleScene)
 
 find_package(OGRE 1.11 REQUIRED COMPONENTS Bites RTShaderSystem)
@@ -6,6 +10,7 @@ find_package(OGRE 1.11 REQUIRED COMPONENTS Bites RTShaderSystem)
 set(CPPS 
     src/Main.cpp 
     src/view/View.cpp 
+    src/controller/Config.cpp
     src/controller/Controller.cpp
     src/model/Model.cpp
     src/model/Position.cpp
