@@ -12,9 +12,10 @@ public:
     ~Controller() override;
     bool keyPressed(const OgreBites::KeyboardEvent&) override;
     // bool mouseMoved(const MouseMotionEvent&) override;
-    void moveAlongTrajectory(std::vector<Position>);
 
 private:
+    void moveAlongTrajectory();
+
     View view;
     Model model;
     Config config;
