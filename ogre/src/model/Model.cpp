@@ -17,3 +17,7 @@ void Model::move(Direction direction) {
 void Model::move(Position const& position) {
     camera->move(position);
 }
+
+void Model::move(OgreBites::MouseMotionEvent const& evt) {
+    camera->move(evt);
+}

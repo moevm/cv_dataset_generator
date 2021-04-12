@@ -10,8 +10,8 @@ class Controller : public OgreBites::InputListener {
 public:
     Controller(Config&& = {});
     ~Controller() override;
-    bool keyPressed(const OgreBites::KeyboardEvent&) override;
-    // bool mouseMoved(const MouseMotionEvent&) override;
+    bool keyPressed(OgreBites::KeyboardEvent const&) override;
+    bool mouseMoved(OgreBites::MouseMotionEvent const&) override;
 
 private:
     void moveAlongTrajectory();

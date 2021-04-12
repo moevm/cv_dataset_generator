@@ -1,7 +1,9 @@
 #include "Camera.hpp"
 
 Camera::Camera(View& view)
-    : Entity(view), camera(view.createCamera("MainCamera")) {
+    : Entity(view),
+      camera(view.createCamera("MainCamera")),
+      cameraMan(new OgreBites::CameraMan(sceneNode)) {
     camera->setNearClipDistance(0.1);
     camera->setFarClipDistance(0);
     camera->setAutoAspectRatio(true);
@@ -45,4 +47,8 @@ void Camera::move(Position const& position) {
     sceneNode->pitch(position.pitch);
     sceneNode->yaw(position.yaw);
     sceneNode->roll(position.roll);
+}
+
+void Camera::move(OgreBites::MouseMotionEvent const& evt) {
+    cameraMan->mouseMoved(evt);
 }

@@ -10,7 +10,7 @@ Controller::~Controller() {
     view.close();
 }
 
-bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
+bool Controller::keyPressed(OgreBites::KeyboardEvent const& evt) {
     if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
         view.end();
     } else if (evt.keysym.sym == OgreBites::SDLK_SPACE) {
@@ -30,6 +30,11 @@ bool Controller::keyPressed(const OgreBites::KeyboardEvent& evt) {
     } else if (evt.keysym.sym == 'e') {
         model.move(Direction::UP);
     }
+    return true;
+}
+
+bool Controller::mouseMoved(OgreBites::MouseMotionEvent const& evt) {
+    model.move(evt);
     return true;
 }
 

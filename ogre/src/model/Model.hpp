@@ -1,5 +1,6 @@
 #pragma once
 #include "../view/View.hpp"
+#include "OgreInput.h"
 #include "Position.hpp"
 #include "entities/Camera.hpp"
 #include "entities/Cube.hpp"
@@ -13,6 +14,7 @@ public:
     Model(View&);
     void move(Direction);
     void move(Position const&);
+    void move(OgreBites::MouseMotionEvent const&);
 
 private:
     View& view;
