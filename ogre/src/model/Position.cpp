@@ -1,5 +1,6 @@
 #include "Position.hpp"
 #include <exception>
+#include <sstream>
 
 Position::Position(double x, double y, double z, double pitch, double yaw, double roll)
     : x(x), y(y), z(z), pitch(pitch), yaw(yaw), roll(roll) {
@@ -23,4 +24,10 @@ std::istream& operator>>(std::istream& is, Position& position) {
     is >> pitch >> yaw >> roll;
     position.pitch = pitch, position.yaw = yaw, position.roll = roll;
     return is;
+}
+
+std::string Position::toString() const {
+    std::stringstream ss;
+    ss << x << '_' << y << '_' << z;
+    return ss.str();
 }
