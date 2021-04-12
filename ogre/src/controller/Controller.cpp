@@ -1,6 +1,6 @@
 #include "Controller.hpp"
 
-Controller::Controller(Config&& config)
+Controller::Controller(Config config)
     : view(), model(view), config(std::move(config)) {
     view.init(this);
     model.move(config.position);
@@ -11,24 +11,44 @@ Controller::~Controller() {
 }
 
 bool Controller::keyPressed(OgreBites::KeyboardEvent const& evt) {
-    if (evt.keysym.sym == OgreBites::SDLK_ESCAPE) {
+    switch (evt.keysym.sym) {
+    case OgreBites::SDLK_ESCAPE:
         view.end();
-    } else if (evt.keysym.sym == OgreBites::SDLK_SPACE) {
+        break;
+    case OgreBites::SDLK_SPACE:
         view.save(config.outputDir / "scene.png");
-    } else if (evt.keysym.sym == OgreBites::SDLK_RETURN) {
+        break;
+    case OgreBites::SDLK_RETURN:
         moveAlongTrajectory();
-    } else if (evt.keysym.sym == 'w') {
+        break;
+    case OgreBites::SDLK_RIGHT:
+        config.trajectory.next();
+        model.move(config.trajectory.get());
+        view.update();
+        break;
+    case OgreBites::SDLK_LEFT:
+        config.trajectory.prev();
+        model.move(config.trajectory.get());
+        view.update();
+        break;
+    case 'w':
         model.move(Direction::FORWARD);
-    } else if (evt.keysym.sym == 's') {
+        break;
+    case 's':
         model.move(Direction::BACKWARD);
-    } else if (evt.keysym.sym == 'a') {
+        break;
+    case 'a':
         model.move(Direction::LEFT);
-    } else if (evt.keysym.sym == 'd') {
+        break;
+    case 'd':
         model.move(Direction::RIGHT);
-    } else if (evt.keysym.sym == 'q') {
+        break;
+    case 'q':
         model.move(Direction::DOWN);
-    } else if (evt.keysym.sym == 'e') {
+        break;
+    case 'e':
         model.move(Direction::UP);
+        break;
     }
     return true;
 }

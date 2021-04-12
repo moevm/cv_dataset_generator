@@ -12,6 +12,7 @@ set(CPPS
     src/view/View.cpp 
     src/controller/Config.cpp
     src/controller/Controller.cpp
+    src/controller/Trajectory.cpp
     src/model/Model.cpp
     src/model/Position.cpp
     src/model/entities/Entity.cpp

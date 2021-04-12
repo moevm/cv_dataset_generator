@@ -43,6 +43,7 @@ Config argParse(int argc, char* argv[]) {
         break;
     case mode::position:
         config.position = positionValues;
+        config.trajectory = {config.position};
         break;
     }
 
@@ -52,9 +53,9 @@ Config argParse(int argc, char* argv[]) {
     return config;
 }
 
-std::vector<Position> getTrajectory(std::string const& filename) {
+Trajectory getTrajectory(std::string const& filename) {
     std::ifstream fin(filename);
-    std::vector<Position> trajectory;
+    Trajectory trajectory;
     Position position;
     while (fin >> position) {
         trajectory.push_back(position);
