@@ -1,7 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # Depencencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     build-essential \
     cmake \
     libgles2-mesa-dev \
@@ -27,6 +28,6 @@ RUN cd /src/ogre \
 COPY . /src/SimpleScene/
 WORKDIR /src/SimpleScene
 
-RUN cmake CMakeLists.txt && make
+RUN cmake CMakeLists.txt && make -j
 
 ENTRYPOINT ["./SimpleScene"]

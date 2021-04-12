@@ -35,15 +35,25 @@ docker build -t <image> .
 docker run --network host -e DISPLAY=$DISPLAY <image> [ARGS...]
 ```
 
-Для сохранения снимков в локальную директорию надо добавить следующую опцию при запуске контейнера:
-
-```bash
---mount type=bind,source=<absolute path to output folder>,target=/src/SimpleScene/output
-```
-
 Перед запуском контейнера возможно потребуется выполнить 
 ```bash
 xhost local:docker
+```
+
+Для сохранения снимков в локальную директорию надо добавить следующую опцию при запуске контейнера:
+
+```bash
+--mount type=bind,source=<absolute path to output folder>,target=<container output folder>
+```
+
+Также необходимо делать `mount` для всех файлов, которые передаются в агрументы запуска. Полный пример запуска контейнера:
+
+```bash
+docker run --network host \
+    -e DISPLAY=$DISPLAY \
+    --mount type=bind,source="$(pwd)",target=/input \
+    --mount type=bind,source="$(pwd)"/output,target=/output \
+    <image> -t /input/trajectory.txt -o /output
 ```
 
 # Сборка вручную
