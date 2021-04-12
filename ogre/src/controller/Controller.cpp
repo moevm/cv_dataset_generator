@@ -16,7 +16,7 @@ bool Controller::keyPressed(OgreBites::KeyboardEvent const& evt) {
         view.end();
         break;
     case OgreBites::SDLK_SPACE:
-        view.save(config.outputDir / "scene.png");
+        view.save(config.outputDir / ("scene_" + model.getPosition().toString() + ".png"));
         break;
     case OgreBites::SDLK_RETURN:
         moveAlongTrajectory();

@@ -1,7 +1,7 @@
 #pragma once
 #include "Entity.hpp"
 
-class Light : Entity {
+class Light : public Entity {
 public:
     Light(View&);
 

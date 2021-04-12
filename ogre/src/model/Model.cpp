@@ -21,3 +21,7 @@ void Model::move(Position const& position) {
 void Model::move(OgreBites::MouseMotionEvent const& evt) {
     camera->move(evt);
 }
+
+Position Model::getPosition() const {
+    return camera->getPosition();
+}

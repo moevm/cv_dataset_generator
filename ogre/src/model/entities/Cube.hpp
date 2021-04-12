@@ -1,7 +1,7 @@
 #pragma once
 #include "Entity.hpp"
 
-class Cube : Entity {
+class Cube : public Entity {
 public:
     Cube(View&);
 

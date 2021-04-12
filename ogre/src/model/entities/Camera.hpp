@@ -4,7 +4,7 @@
 #include "OgreCameraMan.h"
 #include "OgreInput.h"
 
-class Camera : Entity {
+class Camera : public Entity {
 public:
     Camera(View&);
     Ogre::Camera* getCamera();

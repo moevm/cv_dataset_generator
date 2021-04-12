@@ -15,6 +15,7 @@ public:
     void move(Direction);
     void move(Position const&);
     void move(OgreBites::MouseMotionEvent const&);
+    Position getPosition() const;
 
 private:
     View& view;

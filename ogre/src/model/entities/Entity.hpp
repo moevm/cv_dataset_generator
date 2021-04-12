@@ -1,8 +1,12 @@
 #pragma once
 #include "../../view/View.hpp"
+#include "../Position.hpp"
 #include "Ogre.h"
 
 class Entity {
+public:
+    Position getPosition() const;
+
 protected:
     Entity(View&);
 
