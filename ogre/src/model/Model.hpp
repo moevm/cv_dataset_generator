@@ -1,4 +1,5 @@
 #pragma once
+#include "../controller/Config.hpp"
 #include "../view/View.hpp"
 #include "OgreInput.h"
 #include "Position.hpp"
@@ -11,11 +12,9 @@
 
 class Model {
 public:
-    Model(View&);
-    void move(Direction);
-    void move(Position const&);
-    void move(OgreBites::MouseMotionEvent const&);
-    Position getPosition() const;
+    Model(View&, Config const&);
+    Camera& getCamera();
+    Camera const& getCamera() const;
 
 private:
     View& view;

@@ -10,7 +10,7 @@
 ## Параметры запуска
 
 ```bash
-./SimpleScene ([-t <trajectory>] | [-p <position>...]) [-o <output>]
+./SimpleScene ([-t <trajectory>] | [-p <position>...]) [-o <output>] [-c <camera>]
 ```
 
 Параметр | Описание 
@@ -18,7 +18,7 @@
 `-t <trajectory>` | Задаёт траекторию камеры в файле `<trajectory>`.
 `-p <position>` | Задаёт исходное положение и ориентацию камеры.
 `-o <output>` | Задаёт директорию для сохранения снимков. По умолчанию файлы сохраняются в `output/`.
-`-c <camera>` | <kbd>TODO</kbd> Задаёт параметры камеры через конфигурационный файл. При отсутствии этого параметра используется одна камера без искажений.
+`-c <camera>` | Задаёт параметры камеры через конфигурационный файл (ROS Camera Info). При отсутствии этого параметра используется одна камера без искажений.
 `-m <model>` | <kbd>TODO</kbd> Задаёт положение объектов на сцене.
 
 # Docker
@@ -51,7 +51,7 @@ xhost local:docker
 ```bash
 docker run --network host \
     -e DISPLAY=$DISPLAY \
-    --mount type=bind,source="$(pwd)",target=/input \
+    --mount type=bind,source="$(pwd)"/input,target=/input \
     --mount type=bind,source="$(pwd)"/output,target=/output \
     <image> -t /input/trajectory.txt -o /output
 ```

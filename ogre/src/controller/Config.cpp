@@ -1,8 +1,10 @@
 #include "Config.hpp"
 #include "../../ext/clipp/clipp.h"
+#include <camera_calibration_parsers/parse.h>
 #include <exception>
 #include <fstream>
 #include <iostream>
+#include <sensor_msgs/CameraInfo.h>
 
 Config argParse(int argc, char* argv[]) {
     using namespace clipp;
@@ -12,6 +14,7 @@ Config argParse(int argc, char* argv[]) {
     Config config;
     std::string trajectoryFile = "";
     std::string outputDir = "";
+    std::string cameraFile = "";
     std::vector<double> positionValues;
 
     auto trajectory = (option("-t").set(selectedMode, mode::trajectory) &
@@ -22,9 +25,10 @@ Config argParse(int argc, char* argv[]) {
                     "initial camera position";
     auto output =
         (option("-o") & value("output", outputDir)) % "output directory";
-    auto help = option("-h").set(selectedMode, mode::position) % "show help";
+    auto camera = (option("-c") & value("camera", cameraFile)) % "camera info";
+    auto help = option("-h").set(selectedMode, mode::help) % "show help";
 
-    auto cli = ((trajectory | position, output) | help);
+    auto cli = ((trajectory | position, output, camera) | help);
 
     if (!parse(argc, argv, cli)) {
         std::cout << make_man_page(cli, argv[0]);
@@ -49,6 +53,13 @@ Config argParse(int argc, char* argv[]) {
 
     if (!outputDir.empty())
         config.outputDir = outputDir;
+
+    if (!cameraFile.empty()) {
+        config.cameraInfo = sensor_msgs::CameraInfo{};
+        std::string cameraName;
+        camera_calibration_parsers::readCalibration(cameraFile, cameraName,
+                                                    *config.cameraInfo);
+    }
 
     return config;
 }
