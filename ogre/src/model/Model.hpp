@@ -12,7 +12,7 @@
 
 class Model {
 public:
-    Model(View&, Config const&);
+    Model(View&, Config&);
     Camera& getCamera();
     Camera const& getCamera() const;
 

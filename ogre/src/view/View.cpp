@@ -1,11 +1,14 @@
 #include "View.hpp"
-// #include <opencv4/opencv2/opencv.hpp>
+#include <opencv4/opencv2/opencv.hpp>
 
-View::View() : OgreBites::ApplicationContext("CV Dataset Generator") {
+View::View(Config& config)
+    : OgreBites::ApplicationContext("CV Dataset Generator"), config(config) {
     initApp();
 }
 
 void View::init(OgreBites::InputListener* inputListener) {
+    if (config.cameraInfo)
+        resize(config.cameraInfo->width, config.cameraInfo->height);
     addInputListener(inputListener);
     getRoot()->startRendering();
 }
@@ -24,7 +27,7 @@ void View::end() {
 
 void View::save(Ogre::String const& filename) {
     getRenderWindow()->writeContentsToFile(filename);
-    // distort(filename);
+    distort(filename);
 }
 
 void View::update() {
@@ -43,11 +46,30 @@ void View::setup() {
 }
 
 void View::distort(Ogre::String const& filename) {
-    // TODO
-    // cv::Mat image = cv::imread(filename);
-    // image.convertTo(image, CV_32FC2);
-    // image.resize(2);
-    // cv::Mat output;
-    // cv::fisheye::distortPoints(image, output, {}, {});
-    // cv::imwrite(filename, output);
+    if (!config.cameraInfo)
+        return;
+    cv::Mat image = cv::imread(filename);
+    cv::Mat cameraMatrix = cv::Mat(3, 3, CV_64F, config.cameraInfo->K.data());
+    cv::Mat distCoeffs = cv::Mat(1, 5, CV_64F, config.cameraInfo->D.data());
+
+    cv::Size imageSize = {image.cols, image.rows};
+    cv::Mat mapX = cv::Mat(imageSize, CV_32FC1);
+    cv::Mat mapY = cv::Mat(imageSize, CV_32FC1);
+    std::vector<cv::Point2f> points, distPoints;
+    for (int y = 0; y < imageSize.height; ++y)
+        for (int x = 0; x < imageSize.width; ++x)
+            distPoints.emplace_back(x, y);
+    cv::undistortPoints(distPoints, points, cameraMatrix, distCoeffs,
+                        cv::noArray(), cameraMatrix);
+
+    for (int y = 0; y < imageSize.height; ++y)
+        for (int x = 0; x < imageSize.width; ++x) {
+            auto const& point = points[y * imageSize.width + x];
+            mapX.at<float>(y, x) = point.x;
+            mapY.at<float>(y, x) = point.y;
+        }
+
+    cv::Mat output;
+    cv::remap(image, output, mapX, mapY, cv::INTER_CUBIC);
+    cv::imwrite(filename, output);
 }

@@ -1,10 +1,11 @@
 #pragma once
+#include "../controller/Config.hpp"
 #include "Ogre.h"
 #include "OgreApplicationContext.h"
 
 class View : OgreBites::ApplicationContext {
 public:
-    View();
+    View(Config&);
 
     void init(OgreBites::InputListener*);
     void resize(unsigned int, unsigned int);
@@ -46,6 +47,7 @@ public:
 
 private:
     Ogre::SceneManager* sceneManager;
+    Config& config;
 
     void setup() override;
     void distort(Ogre::String const&);

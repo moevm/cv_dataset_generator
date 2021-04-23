@@ -3,6 +3,6 @@
 
 int main(int argc, char* argv[]) {
     Config config = argParse(argc, argv);
-    Controller controller(std::move(config));
+    Controller controller(config);
     return 0;
 }

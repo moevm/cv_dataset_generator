@@ -8,7 +8,7 @@
 
 class Controller : public OgreBites::InputListener {
 public:
-    Controller(Config = {});
+    Controller(Config&);
     ~Controller() override;
     bool keyPressed(OgreBites::KeyboardEvent const&) override;
     bool mouseMoved(OgreBites::MouseMotionEvent const&) override;
@@ -18,5 +18,5 @@ private:
 
     View view;
     Model model;
-    Config config;
+    Config& config;
 };

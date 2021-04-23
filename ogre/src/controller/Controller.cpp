@@ -1,10 +1,7 @@
 #include "Controller.hpp"
 
-Controller::Controller(Config config)
-    : view(), model(view, config), config(std::move(config)) {
-    model.getCamera().move(config.position);
-    if (config.cameraInfo)
-        view.resize(config.cameraInfo->width, config.cameraInfo->height);
+Controller::Controller(Config& config)
+    : view(config), model(view, config), config(config) {
     view.init(this);
 }
 

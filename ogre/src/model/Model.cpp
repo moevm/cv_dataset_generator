@@ -1,6 +1,6 @@
 #include "Model.hpp"
 
-Model::Model(View& view, Config const& config)
+Model::Model(View& view, Config& config)
     : view(view),
       light(std::make_unique<Light>(view)),
       camera(std::make_unique<Camera>(view)),
@@ -9,6 +9,7 @@ Model::Model(View& view, Config const& config)
       ground(std::make_unique<Ground>(view)) {
     if (config.cameraInfo)
         getCamera().callibrate(*config.cameraInfo);
+    getCamera().move(config.position);
     view.addViewport(camera->getCamera())->setBackgroundColour(Ogre::ColourValue(0.4, 0.5, 0.6));
 }
 
