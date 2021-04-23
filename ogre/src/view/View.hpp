@@ -7,6 +7,7 @@ public:
     View();
 
     void init(OgreBites::InputListener*);
+    void resize(unsigned int, unsigned int);
     void close();
     void end();
     void save(Ogre::String const&);
@@ -47,4 +48,5 @@ private:
     Ogre::SceneManager* sceneManager;
 
     void setup() override;
+    void distort(Ogre::String const&);
 };

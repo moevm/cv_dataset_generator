@@ -2,8 +2,10 @@
 
 Controller::Controller(Config config)
     : view(), model(view, config), config(std::move(config)) {
-    view.init(this);
     model.getCamera().move(config.position);
+    if (config.cameraInfo)
+        view.resize(config.cameraInfo->width, config.cameraInfo->height);
+    view.init(this);
 }
 
 Controller::~Controller() {
