@@ -6,9 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(SimpleScene)
 
 find_package(OGRE 1.11 REQUIRED COMPONENTS Bites RTShaderSystem)
-find_package(sensor_msgs REQUIRED)
-find_package(camera_calibration_parsers REQUIRED)
-# find_package(OpenCV 4.1 REQUIRED)
+find_package(OpenCV 4.1 REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 set(CPPS 
     src/Main.cpp 
@@ -28,11 +27,9 @@ set(CPPS
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
-include_directories(${sensor_msgs_INCLUDE_DIRS})
-include_directories(${camera_calibration_parsers_INCLUDE_DIRS})
-# include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${YAML_CPP_INCLUDE_DIRS})
 
 add_executable(SimpleScene ${CPPS})
 
-target_link_libraries(SimpleScene OgreBites OgreRTShaderSystem ${camera_calibration_parsers_LIBRARIES})
-# target_link_libraries(SimpleScene OgreBites OgreRTShaderSystem ${OpenCV_LIBS})
+target_link_libraries(SimpleScene OgreBites OgreRTShaderSystem ${OpenCV_LIBS} ${YAML_CPP_LIBRARIES})

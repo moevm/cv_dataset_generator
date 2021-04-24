@@ -46,14 +46,15 @@ xhost local:docker
 --mount type=bind,source=<absolute path to output folder>,target=<container output folder>
 ```
 
-Также необходимо делать `mount` для всех файлов, которые передаются в агрументы запуска. Полный пример запуска контейнера:
+Также необходимо делать `mount` для всех файлов, которые передаются в аргументы запуска. **Полный пример** запуска контейнера:
 
 ```bash
 docker run --network host \
     -e DISPLAY=$DISPLAY \
     --mount type=bind,source="$(pwd)"/input,target=/input \
     --mount type=bind,source="$(pwd)"/output,target=/output \
-    <image> -t /input/trajectory.txt -o /output
+    <image> \
+    -t /input/trajectory.txt -c /input/camera_info_autobot10.yaml -o /output
 ```
 
 # Сборка вручную

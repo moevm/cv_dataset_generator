@@ -18,7 +18,7 @@ Ogre::Camera* Camera::getCamera() {
     return camera;
 }
 
-void Camera::callibrate(sensor_msgs::CameraInfo const& cameraInfo) {
+void Camera::callibrate(CameraInfo const& cameraInfo) {
     double angle = 2 * std::atan2(cameraInfo.height, (2 * cameraInfo.P[5]));
     camera->setFOVy(Ogre::Radian(angle));
 }

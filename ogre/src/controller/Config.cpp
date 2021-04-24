@@ -1,10 +1,9 @@
 #include "Config.hpp"
 #include "../../ext/clipp/clipp.h"
-#include <camera_calibration_parsers/parse.h>
 #include <exception>
 #include <fstream>
 #include <iostream>
-#include <sensor_msgs/CameraInfo.h>
+#include <yaml-cpp/yaml.h>
 
 Config argParse(int argc, char* argv[]) {
     using namespace clipp;
@@ -54,12 +53,8 @@ Config argParse(int argc, char* argv[]) {
     if (!outputDir.empty())
         config.outputDir = outputDir;
 
-    if (!cameraFile.empty()) {
-        config.cameraInfo = sensor_msgs::CameraInfo{};
-        std::string cameraName;
-        camera_calibration_parsers::readCalibration(cameraFile, cameraName,
-                                                    *config.cameraInfo);
-    }
+    if (!cameraFile.empty())
+        config.cameraInfo = getCameraInfo(cameraFile);
 
     return config;
 }
@@ -72,4 +67,47 @@ Trajectory getTrajectory(std::string const& filename) {
         trajectory.push_back(position);
     }
     return trajectory;
+}
+
+CameraInfo getCameraInfo(std::string const& filename) {
+    YAML::Node cameraYAML = YAML::LoadFile(filename);
+    CameraInfo cameraInfo;
+
+    if (cameraYAML["height"])
+        cameraInfo.height = cameraYAML["height"].as<int>();
+    else if (cameraYAML["image_height"])
+        cameraInfo.height = cameraYAML["image_height"].as<int>();
+
+    if (cameraYAML["width"])
+        cameraInfo.width = cameraYAML["width"].as<int>();
+    else if (cameraYAML["image_width"])
+        cameraInfo.width = cameraYAML["image_width"].as<int>();
+
+    if (cameraYAML["camera_name"])
+        cameraInfo.name = cameraYAML["camera_name"].as<std::string>();
+
+    if (cameraYAML["D"])
+        cameraInfo.D = cameraYAML["D"].as<std::vector<double>>();
+    else if (cameraYAML["distortion_coefficients"])
+        cameraInfo.D =
+            cameraYAML["distortion_coefficients"]["data"].as<std::vector<double>>();
+
+    if (cameraYAML["K"])
+        cameraInfo.K = cameraYAML["K"].as<std::vector<double>>();
+    else if (cameraYAML["camera_matrix"])
+        cameraInfo.K = cameraYAML["camera_matrix"]["data"].as<std::vector<double>>();
+
+    if (cameraYAML["R"])
+        cameraInfo.R = cameraYAML["R"].as<std::vector<double>>();
+    else if (cameraYAML["rectification_matrix"])
+        cameraInfo.R =
+            cameraYAML["rectification_matrix"]["data"].as<std::vector<double>>();
+
+    if (cameraYAML["P"])
+        cameraInfo.P = cameraYAML["P"].as<std::vector<double>>();
+    else if (cameraYAML["projection_matrix"])
+        cameraInfo.P =
+            cameraYAML["projection_matrix"]["data"].as<std::vector<double>>();
+
+    return cameraInfo;
 }
