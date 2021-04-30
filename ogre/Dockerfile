@@ -11,6 +11,8 @@ RUN apt-get update && \
     zlib1g \
     libsdl2-dev \
     libxt-dev \
+    libopencv-dev python3-opencv \
+    libyaml-cpp-dev \
     && apt-get clean
 
 # Retrieving OGRE sources
