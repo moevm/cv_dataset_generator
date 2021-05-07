@@ -7,6 +7,7 @@
 #include "entities/Cube.hpp"
 #include "entities/Ground.hpp"
 #include "entities/Light.hpp"
+#include "entities/Mesh.hpp"
 #include "entities/Sphere.hpp"
 #include <memory>
 
@@ -22,5 +23,6 @@ private:
     std::unique_ptr<Camera> camera;
     std::unique_ptr<Cube> cube;
     std::unique_ptr<Sphere> sphere;
+    std::unique_ptr<Mesh> cottage;
     std::unique_ptr<Ground> ground;
 };

@@ -23,6 +23,7 @@ set(CPPS
     src/model/entities/Ground.cpp
     src/model/entities/Light.cpp
     src/model/entities/Sphere.cpp
+    src/model/entities/Mesh.cpp
 )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")

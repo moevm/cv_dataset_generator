@@ -6,7 +6,8 @@ Model::Model(View& view, Config& config)
       camera(std::make_unique<Camera>(view)),
       cube(std::make_unique<Cube>(view)),
       sphere(std::make_unique<Sphere>(view)),
-      ground(std::make_unique<Ground>(view)) {
+      ground(std::make_unique<Ground>(view)),
+      cottage(std::make_unique<Mesh>(view)) {
     if (config.cameraInfo)
         getCamera().callibrate(*config.cameraInfo);
     getCamera().move(config.position);
