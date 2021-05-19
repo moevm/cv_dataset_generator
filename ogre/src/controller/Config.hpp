@@ -21,7 +21,7 @@ struct Config {
     Position position;
     std::filesystem::path outputDir = "output";
     std::optional<CameraInfo> cameraInfo;
-    std::filesystem::path modelFile;
+    std::filesystem::path modelFile = "scene/cottage_blender.scene";
 };
 
 Config argParse(int argc, char* argv[]);
