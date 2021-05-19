@@ -1,16 +1,15 @@
 #include "Mesh.hpp"
 
-Mesh::Mesh(View& view) : Entity(view), mesh(view.createEntity(create())) {
+Mesh::Mesh(View& view, Ogre::String const& meshFile, Ogre::String const& materialName)
+    : Entity(view), mesh(view.createEntity(create(meshFile))) {
     mesh->setCastShadows(true);
-    mesh->setMaterialName("cottage_texture");
+    mesh->setMaterialName(materialName);
 
-    sceneNode->setPosition(0, 14, 10);
-    // Ogre::Real scale = 0.05;
-    // sceneNode->setScale(scale, scale, scale);
+    sceneNode->setPosition(0, 0, 0);
     sceneNode->attachObject(mesh);
 }
 
-Ogre::MeshPtr Mesh::create() {
+Ogre::MeshPtr Mesh::create(Ogre::String const& meshFile) {
     return Ogre::MeshManager::getSingleton().load(
-        "Cube.002.mesh", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+        meshFile, Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
 }

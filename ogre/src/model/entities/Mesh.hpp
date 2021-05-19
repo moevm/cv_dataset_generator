@@ -3,10 +3,10 @@
 
 class Mesh : public Entity {
 public:
-    Mesh(View&);
+    Mesh(View&, Ogre::String const&, Ogre::String const&);
 
 private:
     Ogre::Entity* mesh;
 
-    Ogre::MeshPtr create();
+    Ogre::MeshPtr create(Ogre::String const&);
 };
