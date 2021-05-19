@@ -50,5 +50,6 @@ private:
     Config& config;
 
     void setup() override;
+    void setupOverlay();
     void distort(Ogre::String const&);
 };

@@ -1,0 +1,25 @@
+overlay StatusOverlay
+{
+    zorder 200
+ 
+    overlay_element StatusPanel Panel
+    {
+        left 0
+        top 0
+        width 0.5
+        height 0.1
+
+        overlay_element StatusTextArea TextArea
+        {
+            metrics_mode pixels
+            left 5
+            top 5
+            width 1000
+            height 1000
+            caption Hello, World!
+            char_height 20
+            colour 0 0 0
+            font_name StatusFont
+        }
+    }
+}

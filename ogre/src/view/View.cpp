@@ -1,9 +1,13 @@
 #include "View.hpp"
+#include "OgreOverlay.h"
+#include "OgreOverlayManager.h"
+#include "OgreOverlaySystem.h"
 #include <opencv4/opencv2/opencv.hpp>
 
 View::View(Config& config)
     : OgreBites::ApplicationContext("CV Dataset Generator"), config(config) {
     initApp();
+    setupOverlay();
 }
 
 void View::init(OgreBites::InputListener* inputListener) {
@@ -43,6 +47,13 @@ void View::setup() {
     Ogre::RTShader::ShaderGenerator* shadergen =
         Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(sceneManager);
+}
+
+void View::setupOverlay() {
+    Ogre::OverlayManager* overlayManager = Ogre::OverlayManager::getSingletonPtr();
+    Ogre::Overlay* overlay = overlayManager->getByName("StatusOverlay");
+    overlay->show();
+    sceneManager->addRenderQueueListener(getOverlaySystem());
 }
 
 void View::distort(Ogre::String const& filename) {
