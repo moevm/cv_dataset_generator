@@ -1,14 +1,9 @@
 #pragma once
 #include "../controller/Config.hpp"
 #include "../view/View.hpp"
-#include "OgreInput.h"
-#include "Position.hpp"
 #include "entities/Camera.hpp"
-#include "entities/Cube.hpp"
-#include "entities/Ground.hpp"
 #include "entities/Light.hpp"
-#include "entities/Mesh.hpp"
-#include "entities/Sphere.hpp"
+#include "entities/Scene.hpp"
 #include <memory>
 
 class Model {
@@ -21,8 +16,5 @@ private:
     View& view;
     std::unique_ptr<Light> light;
     std::unique_ptr<Camera> camera;
-    std::unique_ptr<Cube> cube;
-    std::unique_ptr<Sphere> sphere;
-    std::unique_ptr<Mesh> cottage;
-    std::unique_ptr<Ground> ground;
+    std::unique_ptr<Scene> scene;
 };

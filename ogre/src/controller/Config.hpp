@@ -21,6 +21,7 @@ struct Config {
     Position position;
     std::filesystem::path outputDir = "output";
     std::optional<CameraInfo> cameraInfo;
+    std::filesystem::path modelFile;
 };
 
 Config argParse(int argc, char* argv[]);

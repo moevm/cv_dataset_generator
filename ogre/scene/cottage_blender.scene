@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.0 -->
+<!-- export_time: Tue, 18 May 2021 16:49:22 +0000 -->
+<!-- previous_export_time: Tue, 18 May 2021 16:27:32 +0000 -->
+<scene author="cthfvrl" formatVersion="1.1" >
+  <nodes >
+    <node name="Cube" >
+      <position x="-1.660252" y="3.656409" z="0.024180" />
+      <rotation qw="0.035656" qx="-0.000000" qy="-0.999364" qz="0.000000" />
+      <scale x="14.264564" y="3.592292" z="8.063920" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBCube", name="cycles", address=0x7fe8efe8f288&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBCube", name="cycles_visibility", address=0x7fe8efe8f148&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Cube.002.mesh" name="Cube" >
+        <userData />
+      </entity>
+    </node>
+    <node name="Camera" >
+      <position x="7.481132" y="5.343665" z="6.507640" />
+      <rotation qw="0.780483" qx="0.483536" qy="0.336872" qz="-0.208704" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <camera fov="0.660595" name="Camera" projectionType="perspective" >
+        <clipping far="100.000000" near="0.100000" />
+      </camera>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="cottage_texture.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.617207" g="0.617207" r="0.617207" />
+  </environment>
+</scene>

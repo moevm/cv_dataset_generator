@@ -4,10 +4,7 @@ Model::Model(View& view, Config& config)
     : view(view),
       light(std::make_unique<Light>(view)),
       camera(std::make_unique<Camera>(view)),
-      cube(std::make_unique<Cube>(view)),
-      sphere(std::make_unique<Sphere>(view)),
-      ground(std::make_unique<Ground>(view)),
-      cottage(std::make_unique<Mesh>(view)) {
+      scene(std::make_unique<Scene>(view, config.modelFile)) {
     if (config.cameraInfo)
         getCamera().callibrate(*config.cameraInfo);
     getCamera().move(config.position);
