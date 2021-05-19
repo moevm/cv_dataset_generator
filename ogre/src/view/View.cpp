@@ -2,6 +2,7 @@
 #include "OgreOverlay.h"
 #include "OgreOverlayManager.h"
 #include "OgreOverlaySystem.h"
+#include "OgreTextAreaOverlayElement.h"
 #include <opencv4/opencv2/opencv.hpp>
 
 View::View(Config& config)
@@ -36,6 +37,13 @@ void View::save(Ogre::String const& filename) {
 
 void View::update() {
     getRoot()->renderOneFrame();
+}
+
+void View::statusUpdate(Position const& position) {
+    Ogre::TextAreaOverlayElement* textArea = static_cast<Ogre::TextAreaOverlayElement*>(
+        Ogre::OverlayManager::getSingleton().getOverlayElement(
+            "StatusTextArea"));
+    textArea->setCaption(position.displayString());
 }
 
 void View::setup() {

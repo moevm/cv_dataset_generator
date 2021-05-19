@@ -58,3 +58,12 @@ void Camera::move(Position const& position) {
 void Camera::move(OgreBites::MouseMotionEvent const& evt) {
     cameraMan->mouseMoved(evt);
 }
+
+Position Camera::getPosition() const {
+    Position position = Entity::getPosition();
+    Ogre::Quaternion quaternion = sceneNode->getOrientation();
+    position.pitch = quaternion.getPitch();
+    position.yaw = quaternion.getYaw();
+    position.roll = quaternion.getRoll();
+    return position;
+}

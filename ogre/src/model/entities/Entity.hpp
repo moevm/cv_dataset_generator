@@ -5,7 +5,7 @@
 
 class Entity {
 public:
-    Position getPosition() const;
+    virtual Position getPosition() const;
 
 protected:
     Entity(View&);

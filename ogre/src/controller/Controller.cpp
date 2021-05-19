@@ -23,44 +23,44 @@ bool Controller::keyPressed(OgreBites::KeyboardEvent const& evt) {
         break;
     case OgreBites::SDLK_RIGHT:
         config.trajectory.next();
-        model.getCamera().move(config.trajectory.get());
+        moveCamera(model.getCamera(), config.trajectory.get());
         view.update();
         break;
     case OgreBites::SDLK_LEFT:
         config.trajectory.prev();
-        model.getCamera().move(config.trajectory.get());
+        moveCamera(model.getCamera(), config.trajectory.get());
         view.update();
         break;
     case 'w':
-        model.getCamera().move(Direction::FORWARD);
+        moveCamera(model.getCamera(), Direction::FORWARD);
         break;
     case 's':
-        model.getCamera().move(Direction::BACKWARD);
+        moveCamera(model.getCamera(), Direction::BACKWARD);
         break;
     case 'a':
-        model.getCamera().move(Direction::LEFT);
+        moveCamera(model.getCamera(), Direction::LEFT);
         break;
     case 'd':
-        model.getCamera().move(Direction::RIGHT);
+        moveCamera(model.getCamera(), Direction::RIGHT);
         break;
     case 'q':
-        model.getCamera().move(Direction::DOWN);
+        moveCamera(model.getCamera(), Direction::DOWN);
         break;
     case 'e':
-        model.getCamera().move(Direction::UP);
+        moveCamera(model.getCamera(), Direction::UP);
         break;
     }
     return true;
 }
 
 bool Controller::mouseMoved(OgreBites::MouseMotionEvent const& evt) {
-    model.getCamera().move(evt);
+    moveCamera(model.getCamera(), evt);
     return true;
 }
 
 void Controller::moveAlongTrajectory() {
     for (int i = 0; i < config.trajectory.size(); ++i) {
-        model.getCamera().move(config.trajectory[i]);
+        moveCamera(model.getCamera(), config.trajectory[i]);
         view.update();
         view.save(config.outputDir / ("scene_" + std::to_string(i) + '_' +
                                       config.trajectory[i].toString() + ".png"));

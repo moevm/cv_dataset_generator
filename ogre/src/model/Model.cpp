@@ -8,6 +8,7 @@ Model::Model(View& view, Config& config)
     if (config.cameraInfo)
         getCamera().callibrate(*config.cameraInfo);
     getCamera().move(config.position);
+    view.statusUpdate(getCamera().getPosition());
     view.addViewport(camera->getCamera())->setBackgroundColour(Ogre::ColourValue(0.4, 0.5, 0.6));
 }
 

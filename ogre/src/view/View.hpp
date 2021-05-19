@@ -13,6 +13,7 @@ public:
     void end();
     void save(Ogre::String const&);
     void update();
+    void statusUpdate(Position const&);
 
     template <class... Args>
     Ogre::SceneNode* createSceneNode(Args&&... args) {

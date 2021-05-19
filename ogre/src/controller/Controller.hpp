@@ -16,6 +16,12 @@ public:
 private:
     void moveAlongTrajectory();
 
+    template <class Movement>
+    void moveCamera(Camera& camera, Movement&& movement) {
+        camera.move(std::forward<Movement>(movement));
+        view.statusUpdate(camera.getPosition());
+    }
+
     View view;
     Model model;
     Config& config;
