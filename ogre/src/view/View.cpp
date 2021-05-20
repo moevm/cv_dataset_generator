@@ -31,12 +31,18 @@ void View::end() {
 }
 
 void View::save(Ogre::String const& filename) {
+    Ogre::OverlayElement* overlay =
+        Ogre::OverlayManager::getSingleton().getOverlayElement("StatusPanel");
+    overlay->hide();
+    getRenderWindow()->update();
     getRenderWindow()->writeContentsToFile(filename);
+    overlay->show();
+    getRenderWindow()->update();
     distort(filename);
 }
 
 void View::update() {
-    getRoot()->renderOneFrame();
+    getRenderWindow()->update();
 }
 
 void View::statusUpdate(Position const& position) {
