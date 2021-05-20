@@ -30,8 +30,8 @@ std::istream& operator>>(std::istream& is, Position& position) {
 std::string Position::toString() const {
     std::stringstream ss;
     ss << std::setprecision(2) << std::fixed;
-    ss << std::fixed << x << '_' << y << '_' << z << '_' << pitch << '_' << yaw
-       << '_' << roll;
+    ss << std::fixed << x << '_' << y << '_' << z << '_' << pitch.valueDegrees()
+       << '_' << yaw.valueDegrees() << '_' << roll.valueDegrees();
     return ss.str();
 }
 
