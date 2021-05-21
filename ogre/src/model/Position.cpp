@@ -44,3 +44,8 @@ std::string Position::displayString() const {
     ss << "Roll  " << std::fixed << roll.valueDegrees();
     return ss.str();
 }
+
+std::vector<double> Position::toVector() const {
+    return {
+        x, y, z, pitch.valueDegrees(), yaw.valueDegrees(), roll.valueDegrees()};
+}

@@ -21,4 +21,5 @@ struct Position {
     friend std::istream& operator>>(std::istream&, Position&);
     std::string toString() const;
     std::string displayString() const;
+    std::vector<double> toVector() const;
 };

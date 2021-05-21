@@ -34,10 +34,10 @@ void View::save(Ogre::String const& filename) {
     Ogre::OverlayElement* overlay =
         Ogre::OverlayManager::getSingleton().getOverlayElement("StatusPanel");
     overlay->hide();
-    getRenderWindow()->update();
+    update();
     getRenderWindow()->writeContentsToFile(filename);
     overlay->show();
-    getRenderWindow()->update();
+    update();
     distort(filename);
 }
 

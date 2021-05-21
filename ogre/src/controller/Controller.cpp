@@ -1,8 +1,11 @@
 #include "Controller.hpp"
+#include "ControlMessage.hpp"
+#include <iostream>
 
 Controller::Controller(Config& config)
     : view(config), model(view, config), config(config) {
     view.init(this);
+    // receiveMessages();
 }
 
 Controller::~Controller() {
@@ -65,4 +68,19 @@ void Controller::moveAlongTrajectory() {
         view.save(config.outputDir / ("scene_" + std::to_string(i) + '_' +
                                       config.trajectory[i].toString() + ".png"));
     }
+}
+
+void Controller::receiveMessages() {
+    // ControlMessage controlMessage;
+    // Position position;
+    // for (int i = -100; i < 100; ++i) {
+    //     controlMessage.position.x = i;
+    //     messageCallback(controlMessage.toYAML());
+    // }
+}
+
+void Controller::messageCallback(std::string const& message) {
+    ControlMessage controlMessage = ControlMessage::fromYAML(message);
+    moveCamera(model.getCamera(), controlMessage.position);
+    view.update();
 }
