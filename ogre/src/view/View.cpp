@@ -56,7 +56,7 @@ void View::setup() {
     OgreBites::ApplicationContext::setup();
 
     sceneManager = getRoot()->createSceneManager();
-    sceneManager->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+    sceneManager->setAmbientLight(Ogre::ColourValue(0.192, 0.152, 0.149));
     sceneManager->setShadowTechnique(Ogre::ShadowTechnique::SHADOWTYPE_STENCIL_ADDITIVE);
     Ogre::RTShader::ShaderGenerator* shadergen =
         Ogre::RTShader::ShaderGenerator::getSingletonPtr();
