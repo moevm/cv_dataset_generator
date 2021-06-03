@@ -1,9 +1,14 @@
 #include "View.hpp"
+#include "OgreOverlay.h"
+#include "OgreOverlayManager.h"
+#include "OgreOverlaySystem.h"
+#include "OgreTextAreaOverlayElement.h"
 #include <opencv4/opencv2/opencv.hpp>
 
 View::View(Config& config)
     : OgreBites::ApplicationContext("CV Dataset Generator"), config(config) {
     initApp();
+    setupOverlay();
 }
 
 void View::init(OgreBites::InputListener* inputListener) {
@@ -26,23 +31,43 @@ void View::end() {
 }
 
 void View::save(Ogre::String const& filename) {
+    Ogre::OverlayElement* overlay =
+        Ogre::OverlayManager::getSingleton().getOverlayElement("StatusPanel");
+    overlay->hide();
+    update();
     getRenderWindow()->writeContentsToFile(filename);
+    overlay->show();
+    update();
     distort(filename);
 }
 
 void View::update() {
-    getRoot()->renderOneFrame();
+    getRenderWindow()->update();
+}
+
+void View::statusUpdate(Position const& position) {
+    Ogre::TextAreaOverlayElement* textArea = static_cast<Ogre::TextAreaOverlayElement*>(
+        Ogre::OverlayManager::getSingleton().getOverlayElement(
+            "StatusTextArea"));
+    textArea->setCaption(position.displayString());
 }
 
 void View::setup() {
     OgreBites::ApplicationContext::setup();
 
     sceneManager = getRoot()->createSceneManager();
-    sceneManager->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+    sceneManager->setAmbientLight(Ogre::ColourValue(0.192, 0.152, 0.149));
     sceneManager->setShadowTechnique(Ogre::ShadowTechnique::SHADOWTYPE_STENCIL_ADDITIVE);
     Ogre::RTShader::ShaderGenerator* shadergen =
         Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(sceneManager);
+}
+
+void View::setupOverlay() {
+    Ogre::OverlayManager* overlayManager = Ogre::OverlayManager::getSingletonPtr();
+    Ogre::Overlay* overlay = overlayManager->getByName("StatusOverlay");
+    overlay->show();
+    sceneManager->addRenderQueueListener(getOverlaySystem());
 }
 
 void View::distort(Ogre::String const& filename) {

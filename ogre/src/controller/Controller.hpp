@@ -4,6 +4,7 @@
 #include "../view/View.hpp"
 #include "Config.hpp"
 #include "OgreInput.h"
+#include <string>
 #include <vector>
 
 class Controller : public OgreBites::InputListener {
@@ -15,6 +16,14 @@ public:
 
 private:
     void moveAlongTrajectory();
+    void receiveMessages();
+    void messageCallback(std::string const&);
+
+    template <class Movement>
+    void moveCamera(Camera& camera, Movement&& movement) {
+        camera.move(std::forward<Movement>(movement));
+        view.statusUpdate(camera.getPosition());
+    }
 
     View view;
     Model model;

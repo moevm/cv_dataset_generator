@@ -12,6 +12,7 @@ public:
     void move(Direction);
     void move(Position const&);
     void move(OgreBites::MouseMotionEvent const&);
+    Position getPosition() const override;
 
 private:
     Ogre::Camera* camera;

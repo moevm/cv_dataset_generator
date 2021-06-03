@@ -14,6 +14,7 @@ Config argParse(int argc, char* argv[]) {
     std::string trajectoryFile = "";
     std::string outputDir = "";
     std::string cameraFile = "";
+    std::string modelFile = "";
     std::vector<double> positionValues;
 
     auto trajectory = (option("-t").set(selectedMode, mode::trajectory) &
@@ -25,9 +26,11 @@ Config argParse(int argc, char* argv[]) {
     auto output =
         (option("-o") & value("output", outputDir)) % "output directory";
     auto camera = (option("-c") & value("camera", cameraFile)) % "camera info";
+    auto model =
+        (option("-m") & value("model", modelFile)) % "model file (.scene)";
     auto help = option("-h").set(selectedMode, mode::help) % "show help";
 
-    auto cli = ((trajectory | position, output, camera) | help);
+    auto cli = ((trajectory | position, output, camera, model) | help);
 
     if (!parse(argc, argv, cli)) {
         std::cout << make_man_page(cli, argv[0]);
@@ -55,6 +58,9 @@ Config argParse(int argc, char* argv[]) {
 
     if (!cameraFile.empty())
         config.cameraInfo = getCameraInfo(cameraFile);
+
+    if (!modelFile.empty())
+        config.modelFile = modelFile;
 
     return config;
 }

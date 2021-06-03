@@ -14,15 +14,14 @@ set(CPPS
     src/view/View.cpp 
     src/controller/Config.cpp
     src/controller/Controller.cpp
+    src/controller/ControlMessage.cpp
     src/controller/Trajectory.cpp
     src/model/Model.cpp
     src/model/Position.cpp
     src/model/entities/Entity.cpp
     src/model/entities/Camera.cpp
-    src/model/entities/Cube.cpp
-    src/model/entities/Ground.cpp
     src/model/entities/Light.cpp
-    src/model/entities/Sphere.cpp
+    src/model/entities/Scene.cpp
 )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")

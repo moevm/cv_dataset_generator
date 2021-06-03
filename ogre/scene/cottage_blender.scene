@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.0 -->
+<!-- export_time: Wed, 19 May 2021 13:52:11 +0000 -->
+<!-- previous_export_time: Wed, 19 May 2021 13:50:32 +0000 -->
+<scene author="cthfvrl" formatVersion="1.1" >
+  <nodes >
+    <node name="Cube" >
+      <position x="-1.660252" y="3.656409" z="0.024180" />
+      <rotation qw="0.035656" qx="-0.000000" qy="-0.999364" qz="0.000000" />
+      <scale x="14.264564" y="3.592292" z="8.063920" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBCube", name="cycles", address=0x7f02f3dad188&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBCube", name="cycles_visibility", address=0x7f02f3dad548&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Cube.002.mesh" name="Cube" >
+        <userData />
+      </entity>
+    </node>
+    <node name="Lamp" >
+      <position x="4.076245" y="5.903862" z="-1.005454" />
+      <rotation qw="0.570948" qx="0.169076" qy="0.755880" qz="-0.272171" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBLamp", name="cycles_visibility", address=0x7f02f3dad908&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+    </node>
+    <node name="Camera" >
+      <position x="7.481132" y="5.343665" z="6.507640" />
+      <rotation qw="0.780483" qx="0.483536" qy="0.336872" qz="-0.208704" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <camera fov="0.660595" name="Camera" projectionType="perspective" >
+        <clipping far="100.000000" near="0.100000" />
+      </camera>
+    </node>
+    <node name="ground" >
+      <position x="0.000000" y="0.077648" z="-0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="-0.000000" />
+      <scale x="63.196327" y="63.196327" z="63.196327" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBground", name="cycles", address=0x7f02f3dad408&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBground", name="cycles_visibility", address=0x7f02f3dad2c8&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Plane.004.mesh" name="ground" >
+        <userData />
+      </entity>
+    </node>
+    <node name="light_3" >
+      <position x="-9.161311" y="24.631321" z="139.086121" />
+      <rotation qw="0.501538" qx="0.430470" qy="0.632160" qz="0.404386" />
+      <scale x="50.823296" y="44.541607" z="44.541611" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBlight_3", name="cycles", address=0x7f02f40e9c48&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBlight_3", name="cycles_visibility", address=0x7f02f41f25a8&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Plane.003.mesh" name="light_3" >
+        <userData />
+      </entity>
+    </node>
+    <node name="light_1" >
+      <position x="89.499535" y="16.530119" z="16.658211" />
+      <rotation qw="0.774319" qx="0.131277" qy="-0.156346" qz="-0.598959" />
+      <scale x="34.020699" y="29.815790" z="29.815790" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBlight_1", name="cycles", address=0x7f02f3dad688&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBlight_1", name="cycles_visibility", address=0x7f02f3dad7c8&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Plane.002.mesh" name="light_1" >
+        <userData />
+      </entity>
+    </node>
+    <node name="light_2" >
+      <position x="5.133750" y="24.631321" z="-140.804489" />
+      <rotation qw="0.698935" qx="-0.288617" qy="0.532639" qz="-0.380112" />
+      <scale x="34.680576" y="30.394108" z="30.394110" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBlight_2", name="cycles", address=0x7f02f40e5288&gt;' name="cycles" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBlight_2", name="cycles_visibility", address=0x7f02f41f37c8&gt;' name="cycles_visibility" type="IDPropertyGroup" />
+      </userData>
+      <entity meshFile="Plane.001.mesh" name="light_2" >
+        <userData />
+      </entity>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="cottage_texture.material" />
+    </item>
+    <item type="material" >
+      <file name="ground.material" />
+    </item>
+    <item type="material" >
+      <file name="light_1.material" />
+    </item>
+    <item type="material" >
+      <file name="light_2.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.617207" g="0.617207" r="0.617207" />
+  </environment>
+</scene>

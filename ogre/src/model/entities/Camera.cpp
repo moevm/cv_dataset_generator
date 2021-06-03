@@ -58,3 +58,15 @@ void Camera::move(Position const& position) {
 void Camera::move(OgreBites::MouseMotionEvent const& evt) {
     cameraMan->mouseMoved(evt);
 }
+
+Position Camera::getPosition() const {
+    Position position = Entity::getPosition();
+    Ogre::Matrix3 rotationMatrix;
+    sceneNode->getOrientation().ToRotationMatrix(rotationMatrix);
+    Ogre::Radian pitch, yaw, roll;
+    rotationMatrix.ToEulerAnglesXYZ(pitch, yaw, roll);
+    position.pitch = pitch;
+    position.yaw = yaw;
+    position.roll = roll;
+    return position;
+}
