@@ -4,6 +4,7 @@
 #include "OgreOverlaySystem.h"
 #include "OgreTextAreaOverlayElement.h"
 #include <opencv4/opencv2/opencv.hpp>
+#include <vector>
 
 View::View(Config& config)
     : OgreBites::ApplicationContext("CV Dataset Generator"), config(config) {
@@ -94,7 +95,15 @@ void View::distort(Ogre::String const& filename) {
             mapY.at<float>(y, x) = point.y;
         }
 
+    // Add alpha channel
+    cv::Mat image_4C;
+    std::vector<cv::Mat> channels;
+    cv::split(image, channels);
+    channels.push_back(channels.at(0) + channels.at(1) + channels.at(2));
+    cv::merge(channels, image_4C);
+
+    // Create distorted image
     cv::Mat output;
-    cv::remap(image, output, mapX, mapY, cv::INTER_CUBIC);
+    cv::remap(image_4C, output, mapX, mapY, cv::INTER_CUBIC, cv::BORDER_TRANSPARENT);
     cv::imwrite(filename, output);
 }
