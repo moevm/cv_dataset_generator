@@ -113,7 +113,8 @@ void View::distort(Ogre::String const& filename) {
     cv::Mat image_4C;
     std::vector<cv::Mat> channels;
     cv::split(image, channels);
-    channels.push_back(channels.at(0) + channels.at(1) + channels.at(2));
+    channels.push_back(channels.at(0).clone());
+    channels.back() = cv::Scalar(255);
     cv::merge(channels, image_4C);
 
     // Create distorted image
