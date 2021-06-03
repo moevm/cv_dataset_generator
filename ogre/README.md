@@ -24,7 +24,7 @@
 `-m <model>` | Задаёт положение объектов на сцене (путь к файлу `.scene`).
 
 ## Тестовые сцены
-* Куб и шар: [scene/checkerboard.scene](scene/basic.scene)
+* Куб и шар: [scene/basic.scene](scene/basic.scene)
 * Шахматная доска: [scene/checkerboard.scene](scene/checkerboard.scene), [input/trajectory_checkerboard.txt](input/trajectory_checkerboard.txt) 
 * Дом: [scene/cottage_blender.scene](scene/cottage_blender.scene)
 
