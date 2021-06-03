@@ -78,6 +78,20 @@ void View::distort(Ogre::String const& filename) {
     cv::Mat cameraMatrix = cv::Mat(3, 3, CV_64F, config.cameraInfo->K.data());
     cv::Mat distCoeffs = cv::Mat(1, 5, CV_64F, config.cameraInfo->D.data());
 
+    // Crop image if it has wrong size
+    if (int width = config.cameraInfo->width, height = config.cameraInfo->height,
+        imageWidth = image.cols, imageHeight = image.rows;
+        width != imageWidth || height != imageHeight) {
+        int x_center = imageWidth / 2, y_center = imageHeight / 2;
+        // Pad image if it is too small (probably should resize with interpolation instead)
+        if (width > imageWidth || height > imageHeight)
+            cv::copyMakeBorder(image, image, 0, height - imageHeight, 0,
+                               width - imageWidth, cv::BORDER_CONSTANT);
+        image(cv::Rect(std::max(x_center - width / 2, 0),
+                       std::max(y_center - height / 2, 0), width, height))
+            .copyTo(image);
+    }
+
     cv::Size imageSize = {image.cols, image.rows};
     cv::Mat mapX = cv::Mat(imageSize, CV_32FC1);
     cv::Mat mapY = cv::Mat(imageSize, CV_32FC1);
@@ -104,6 +118,6 @@ void View::distort(Ogre::String const& filename) {
 
     // Create distorted image
     cv::Mat output;
-    cv::remap(image_4C, output, mapX, mapY, cv::INTER_CUBIC, cv::BORDER_TRANSPARENT);
+    cv::remap(image_4C, output, mapX, mapY, cv::INTER_CUBIC);
     cv::imwrite(filename, output);
 }
