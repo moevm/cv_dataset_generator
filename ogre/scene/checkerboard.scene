@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.1 -->
+<!-- export_time: Thu, 03 Jun 2021 21:47:20 +0000 -->
+<!-- previous_export_time: Thu, 03 Jun 2021 21:15:32 +0000 -->
+<scene author="cthfvrl" formatVersion="1.1" >
+  <nodes >
+    <node name="Board" >
+      <position x="0.000000" y="0.000000" z="-0.000000" />
+      <rotation qw="0.707107" qx="0.000000" qy="0.000000" qz="-0.707107" />
+      <scale x="2.000000" y="1.000000" z="2.000000" />
+      <entity meshFile="Board.mesh" name="Board" >
+        <userData />
+      </entity>
+    </node>
+    <node name="Checkerboard" >
+      <position x="0.010000" y="0.000000" z="-0.000000" />
+      <rotation qw="0.500000" qx="0.500000" qy="0.500000" qz="-0.500000" />
+      <scale x="0.790000" y="1.000000" z="1.082000" />
+      <entity meshFile="Checkerboard.mesh" name="Checkerboard" >
+        <userData />
+      </entity>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="Whiteboard.material" />
+    </item>
+    <item type="material" >
+      <file name="Checkerboard.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.050876" g="0.050876" r="0.050876" />
+  </environment>
+</scene>
