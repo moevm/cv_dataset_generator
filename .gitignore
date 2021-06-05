@@ -1,0 +1,7 @@
+.vs/
+
+project/Binaries/*
+project/Build/*
+project/Saved/*
+project/DerivedDataCache/*
+project/Intermediate/*

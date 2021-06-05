@@ -21,8 +21,12 @@ public:
 	ABaseDevice();
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* Mesh;
+	UPROPERTY()
+		USceneComponent* Root;
+	UPROPERTY(BlueprintReadWrite, Category = "Default", meta = (ExposeOnSpawn = "true"))
+		FString DeviceNameStart;
 
 	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
 		FString GetNameDevice();
@@ -30,24 +34,22 @@ public:
 		void SetDeviceName(FString deviceName_);
 
 	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
-		FString GetPointCloudFileName();
-	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
-		void SetPointCloudFileName(FString PointCloudFileName_);
-
-	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
 		void SetIsActive(bool State);
 	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
 		bool GetIsActive();
 
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		void SetDeviceType(FString DeviceType_);
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		FString GetDeviceType();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	void PostPhysTick(UWorld* World, ELevelTick TickType, float DeltaSeconds);
-
-	FString pointCloudFileName;
 
 private:
 	bool isActive = false;
 	FString DeviceName;
+	FString DeviceType = "None";
 };
 

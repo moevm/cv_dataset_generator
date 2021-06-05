@@ -2,10 +2,7 @@
 
 
 #include "BaseDevice.h"
-
-#include "Math/Vector.h"
-#include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
-#include "DrawDebugHelpers.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 ABaseDevice::ABaseDevice()
@@ -13,13 +10,13 @@ ABaseDevice::ABaseDevice()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
-	RootComponent = Mesh;
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	RootComponent = Root;
 
-	DeviceName = GetName();
-	pointCloudFileName = DeviceName + "_" + FDateTime::Now().ToString() + ".csv";
-	PointCloudWriter = std::make_unique<FileWriter>();
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	Mesh->AttachTo(Root);
 
+	this->DeviceName = this->DeviceNameStart;
 }
 
 // Called when the game starts or when spawned
@@ -46,16 +43,6 @@ void ABaseDevice::SetDeviceName(FString deviceName_)
 	this->DeviceName = deviceName_;
 }
 
-FString ABaseDevice::GetPointCloudFileName()
-{
-	return this->pointCloudFileName;
-}
-
-void ABaseDevice::SetPointCloudFileName(FString PointCloudFileName_)
-{
-	this->pointCloudFileName = this->DeviceName + "_" + FDateTime::Now().ToString() + ".csv";
-}
-
 void ABaseDevice::SetIsActive(bool State)
 {
 	this->isActive = State;
@@ -64,5 +51,15 @@ void ABaseDevice::SetIsActive(bool State)
 bool ABaseDevice::GetIsActive()
 {
 	return this->isActive;
+}
+
+void ABaseDevice::SetDeviceType(FString DeviceType_)
+{
+	this->DeviceType = DeviceType_;
+}
+
+FString ABaseDevice::GetDeviceType()
+{
+	return this->DeviceType;
 }
 
