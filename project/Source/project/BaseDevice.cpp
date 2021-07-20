@@ -13,7 +13,7 @@ ABaseDevice::ABaseDevice()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SM_Lamp_Wall"));
 	Mesh->AttachTo(Root);
 
 	this->DeviceName = this->DeviceNameStart;
