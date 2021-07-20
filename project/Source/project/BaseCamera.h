@@ -13,5 +13,11 @@ UCLASS()
 class PROJECT_API ABaseCamera : public ABaseDevice
 {
 	GENERATED_BODY()
+public:
+	ABaseCamera();
+	virtual void Tick(float DeltaTime) override;
+protected:
+	virtual void BeginPlay() override;
+
 	
 };
