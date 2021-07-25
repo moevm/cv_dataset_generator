@@ -1,0 +1,51 @@
+# Gazebo & ROS
+
+## Запуск Docker-контейнера
+
+```bash
+docker build -t <image> .
+
+xhost local:docker
+
+docker run -it \
+    --env="DISPLAY" \
+    --env="QT_X11_NO_MITSHM=1" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --device=/dev/dri:/dev/dri \
+    <image> \
+    bash
+```
+
+## Использование
+
+Запуск тестовой симуляции:
+```bash
+roslaunch cottage_gazebo cottage_blender.launch
+```
+
+После запуска можно управлять симуляцией командами ниже. Для этого имеет смысл запустить `tmux` (он уже установлен в контейнере), создать два окна, в одном из них выполнить предыдущую команду, а в другом — управляющие команды.
+
+Просмотр изображения с камеры:
+```bash
+rosrun image_view image_view image:=/camera/image_raw
+```
+
+Позиция камеры (или любого другого объекта из текущей симуляции вместо `camera`):
+```bash
+rosrun camera_controls gms.py camera
+```
+
+Передвижение камеры на новую позицию:
+```bash
+rosrun camera_controls move.py camera [x] [y] [z] [roll] [pitch] [yaw]
+```
+
+Сохранение изображения с камеры в текущей директории (название файла создаётся из текущей позиции):
+```bash
+rosrun camera_controls save_image.py camera
+```
+
+Изменение конфигурации камеры через конфигурационный файл:
+```bash
+rosrun camera_controls save_image.py [camera name] [camera_info.yaml]
+```
