@@ -24,7 +24,7 @@ void Camera::callibrate(CameraInfo const& cameraInfo) {
 }
 
 void Camera::move(Direction direction) {
-    const Ogre::Real delta = 0.3;
+    const Ogre::Real delta = 0.1;
     switch (direction) {
     case Direction::FORWARD:
         sceneNode->translate(0, 0, -delta);
@@ -50,9 +50,9 @@ void Camera::move(Direction direction) {
 void Camera::move(Position const& position) {
     sceneNode->setPosition(position.x, position.y, position.z);
     sceneNode->setOrientation(Ogre::Quaternion());
-    sceneNode->pitch(position.pitch);
-    sceneNode->yaw(position.yaw);
-    sceneNode->roll(position.roll);
+    Ogre::Matrix3 rotationMatrix;
+    rotationMatrix.FromEulerAnglesXYZ(position.pitch, position.yaw, position.roll);
+    sceneNode->setOrientation(rotationMatrix);
 }
 
 void Camera::move(OgreBites::MouseMotionEvent const& evt) {

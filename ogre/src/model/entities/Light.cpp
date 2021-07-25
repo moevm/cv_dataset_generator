@@ -7,5 +7,8 @@ Light::Light(View& view) : Entity(view), light(view.createLight()) {
 
     sceneNode->setPosition(10, 60, 50);
     sceneNode->setDirection(-10, -60, -50);
+
+    sceneNode->setPosition(5, 0, -.5);
+    sceneNode->setDirection(-5, 0, -.5);
     sceneNode->attachObject(light);
 }
