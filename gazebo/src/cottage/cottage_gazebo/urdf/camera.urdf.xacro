@@ -45,7 +45,7 @@
 
   <gazebo reference="camera">
     <sensor type="camera" name="camera">
-      <update_rate>30.0</update_rate>
+      <update_rate>300.0</update_rate>
       <camera name="head">
         <!--<horizontal_fov>1.88413</horizontal_fov>-->
         <image>
