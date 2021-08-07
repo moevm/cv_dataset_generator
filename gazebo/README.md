@@ -47,5 +47,5 @@ rosrun camera_controls save_image.py camera
 
 Изменение конфигурации камеры через конфигурационный файл:
 ```bash
-rosrun camera_controls save_image.py [camera name] [camera_info.yaml]
+rosrun camera_controls set_camera_info.py [camera name] [camera_info.yaml]
 ```
