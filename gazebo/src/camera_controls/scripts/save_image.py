@@ -8,6 +8,7 @@ from sensor_msgs.msg import Image
 from gazebo_msgs.srv import GetModelState
 from tf.transformations import euler_from_quaternion
 from math import degrees
+# from threading import Event
 
 
 def save(image, filename):
@@ -41,7 +42,20 @@ def get_filename(cname):
 
 
 def get_image(cname):
-    image_topic = f'/{cname}/image_raw'
+    image_topic = f'/{cname}/image_raw/r'
+    # image_topic = 'chatter'
+    # subscriber = None
+    # image = None
+    # event = Event()
+
+    # def callback(msg):
+    #     nonlocal image
+    #     image = msg
+    #     event.set()
+    #     subscriber.unregister()
+
+    # subscriber = rospy.Subscriber(image_topic, Image, callback, queue_size=1, buff_size=2**24)  # 800*800*3
+    # event.wait()
     image = rospy.wait_for_message(image_topic, Image)
     return image
 

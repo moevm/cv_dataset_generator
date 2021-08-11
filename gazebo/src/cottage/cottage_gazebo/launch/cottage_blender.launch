@@ -16,6 +16,7 @@
   <include file="$(find cottage_gazebo)/launch/spawn_cottage_blender_light_1.launch" />
   <include file="$(find cottage_gazebo)/launch/spawn_cottage_blender_light_2.launch" />
   <include file="$(find cottage_gazebo)/launch/spawn_cottage_blender_light_3.launch" />
-  <include file="$(find cottage_gazebo)/launch/spawn_camera.launch" />
+
+  <include file="$(find camera_controls)/launch/spawn_camera.launch" />
   
 </launch>

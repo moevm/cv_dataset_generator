@@ -164,6 +164,7 @@ catkin_install_python(PROGRAMS
   scripts/gms.py
   scripts/set_camera_info.py
   scripts/save_image.py
+  scripts/repeater.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
