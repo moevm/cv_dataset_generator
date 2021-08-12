@@ -49,3 +49,5 @@ rosrun camera_controls save_image.py camera
 ```bash
 rosrun camera_controls set_camera_info.py [camera name] [camera_info.yaml]
 ```
+
+Для передвижения по траектории и сохранение снимков из каждого узла запустите скрипт `src/camera_controls/scripts/trajectory.sh` и передайте в аргументы файл с траекторией (позиции из 6 чисел на отдельных строках). Снимки сохранятся в текущую директорию. Пример траектории для облёта дома лежит в `src/camera_controls/test/trajectory.txt`.
