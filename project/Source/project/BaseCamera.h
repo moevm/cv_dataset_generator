@@ -16,8 +16,14 @@ class PROJECT_API ABaseCamera : public ABaseDevice
 public:
 	ABaseCamera();
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable, Category = "BaseCamera_Category")
+		void SetCameraActorReference(ACameraActor* Camera_);
+	UFUNCTION(BlueprintCallable, Category = "BaseCamera_Category")
+		ACameraActor* GetCameraActorReference();
 protected:
 	virtual void BeginPlay() override;
 
-	
+private:
+	ACameraActor* CameraActorReference;
 };
