@@ -10,7 +10,8 @@ xhost local:docker
 docker run -it \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
-    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix" \
+    --volume="$(pwd)/src:/catkin_ws/src:rw" \
     --device=/dev/dri:/dev/dri \
     <image> \
     bash
@@ -30,7 +31,7 @@ roslaunch cottage_gazebo cottage_blender.launch
 rosrun image_view image_view image:=/camera/image_raw
 ```
 
-Позиция камеры (или любого другого объекта из текущей симуляции вместо `camera`):
+Получение позиции камеры (или любого другого объекта из текущей симуляции вместо `camera`):
 ```bash
 rosrun camera_controls gms.py camera
 ```
@@ -50,4 +51,12 @@ rosrun camera_controls save_image.py camera
 rosrun camera_controls set_camera_info.py [camera name] [camera_info.yaml]
 ```
 
-Для передвижения по траектории и сохранение снимков из каждого узла запустите скрипт `src/camera_controls/scripts/trajectory.sh` и передайте в аргументы файл с траекторией (позиции из 6 чисел на отдельных строках). Снимки сохранятся в текущую директорию. Пример траектории для облёта дома лежит в `src/camera_controls/test/trajectory.txt`.
+Для передвижения по траектории и сохранение снимков из каждого узла запустите скрипт `src/camera_controls/scripts/trajectory.sh` и передайте в аргументы файл с траекторией (позиции из 6 чисел на отдельных строках). Снимки сохранятся в текущую директорию, названия снимков будут начинаться с порядкового номера точки в траектории. Пример траектории для облёта дома лежит в `src/camera_controls/test/trajectory.txt`.
+
+## Генератор траекторий
+
+Генератор траекторий лежит в `src/dataset_generator/src/trajectory_generator.py`. Поддерживаются два режима:
+- `reference` — генерация траектории, близкой к референсной
+- `curve` — генерация замкнутой кривой вокруг центра в заданном диапазоне расстояния
+
+Параметр `-s`/`--seed` устанавливает сид рандома. Остальные параметры смотрите в `--help`.
