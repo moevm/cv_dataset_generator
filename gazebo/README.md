@@ -52,6 +52,9 @@ rosrun camera_controls set_camera_info.py [camera name] [camera_info.yaml]
 ```
 
 Для передвижения по траектории и сохранение снимков из каждого узла запустите скрипт `src/camera_controls/scripts/trajectory.sh` и передайте в аргументы файл с траекторией (позиции из 6 чисел на отдельных строках). Снимки сохранятся в текущую директорию, названия снимков будут начинаться с порядкового номера точки в траектории. Пример траектории для облёта дома лежит в `src/camera_controls/test/trajectory.txt`.
+```bash
+rosrun camera_controls trajectory.sh [trajectory]
+```
 
 ## Генератор траекторий
 
@@ -60,3 +63,9 @@ rosrun camera_controls set_camera_info.py [camera name] [camera_info.yaml]
 - `curve` — генерация замкнутой кривой вокруг центра в заданном диапазоне расстояния
 
 Параметр `-s`/`--seed` устанавливает сид рандома. Остальные параметры смотрите в `--help`.
+
+Пример генерации траектории:
+
+```bash
+rosrun dataset_generator trajectory_generator.py curve 1 2
+```
