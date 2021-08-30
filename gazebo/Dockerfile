@@ -7,6 +7,7 @@ RUN apt-get update && \
     ros-noetic-gazebo-plugins ros-noetic-xacro \
     ros-noetic-rqt ros-noetic-rqt-common-plugins \
     ros-noetic-image-view \
+    libignition-msgs-dev libignition-transport-dev \
     tmux
 
 WORKDIR /catkin_ws
