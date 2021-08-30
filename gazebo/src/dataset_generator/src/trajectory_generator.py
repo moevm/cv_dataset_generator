@@ -20,6 +20,8 @@ def parse_args(argv):
     ref_parser.add_argument('reference', help='reference trajectory path')
     ref_parser.add_argument('-d', '--delta', type=float, nargs='?', default=1,
                             help='fluctuation radius (max difference of each point with reference)')
+    ref_parser.add_argument('-a', '--angle-delta', type=float, nargs='?', default=0,
+                            help='angle fluctuation radius (radians)')
 
     curve_parser = subparsers.add_parser('curve', parents=[common],
                                          help='closed curve trajectory in a given range (annulus)')
@@ -29,8 +31,8 @@ def parse_args(argv):
                               help='center 3D coordinates')
     curve_parser.add_argument('-l', '--length', type=int, nargs='?', default=3,
                               help='number of points in trajectory')
-    curve_parser.add_argument('-d', '--delta', type=float, nargs='?', default=0,
-                              help='angle fluctuation radius (degrees)')
+    curve_parser.add_argument('-a', '--angle-delta', type=float, nargs='?', default=0,
+                              help='angle fluctuation radius (radians)')
 
     args = parser.parse_args(args=argv)
 
@@ -49,9 +51,9 @@ def main(args):
     np.random.seed(args.seed)
 
     if args.mode == 'reference':
-        trajectory = reference_trajectory(args.reference, args.delta)
+        trajectory = reference_trajectory(args.reference, args.delta, args.angle_delta)
     else:
-        trajectory = curve_trajectory(args.r, args.R, args.center, args.length, args.delta)
+        trajectory = curve_trajectory(args.r, args.R, args.center, args.length, args.angle_delta)
 
     if args.output is None:
         print_trajectory(trajectory)
@@ -60,13 +62,16 @@ def main(args):
             print_trajectory(trajectory, file)
 
 
-def reference_trajectory(reference_path, delta):
+def reference_trajectory(reference_path, delta, angle_delta):
     """Generate similar trajectory based on reference."""
 
     trajectory = []
     for line in open(reference_path):
         reference = list(map(float, line.split()))
-        point = [x + np.random.uniform(-delta, delta) for x in reference]
+        pos = reference[:3]
+        rot = reference[3:]
+        point = [x + np.random.uniform(-delta, delta) for x in pos] + \
+            [x + np.random.uniform(-angle_delta, angle_delta) for x in rot]
         trajectory.append(point)
     return trajectory
 
@@ -83,7 +88,7 @@ def closed_curve(length, num=10):
     return angle, radius
 
 
-def curve_trajectory(r, R, center, trajectory_length, delta):
+def curve_trajectory(r, R, center, trajectory_length, angle_delta):
     """Generate closed curve trajectory in a given range of distance [r, R] from center."""
 
     # Generate random closed curve
@@ -116,9 +121,9 @@ def curve_trajectory(r, R, center, trajectory_length, delta):
     # plt.show()
 
     # Calculate angles looking in the center with random noise
-    roll = np.zeros_like(x) + np.random.uniform(-delta, delta, x.shape)
-    yaw = np.degrees(np.arctan2(-y, -x)) + np.random.uniform(-delta, delta, x.shape)
-    pitch = np.degrees(np.arcsin(z / scaled_distance)) + np.random.uniform(-delta, delta, x.shape)
+    roll = np.zeros_like(x) + np.random.uniform(-angle_delta, angle_delta, x.shape)
+    yaw = np.arctan2(-y, -x) + np.random.uniform(-angle_delta, angle_delta, x.shape)
+    pitch = np.arcsin(z / scaled_distance) + np.random.uniform(-angle_delta, angle_delta, x.shape)
 
     return list(zip(x, y, z, roll, pitch, yaw))
 
