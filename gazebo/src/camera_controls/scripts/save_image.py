@@ -7,7 +7,6 @@ from cv_bridge import CvBridge, CvBridgeError
 from sensor_msgs.msg import Image
 from gazebo_msgs.srv import GetModelState
 from tf.transformations import euler_from_quaternion
-from math import degrees
 
 
 def save(image, filename):
@@ -35,7 +34,7 @@ def get_filename(cname):
     pose = [model_state.pose.position.x,
             model_state.pose.position.y,
             model_state.pose.position.z,
-            *map(degrees, euler_from_quaternion(orientation_list))]
+            *euler_from_quaternion(orientation_list)]
     base = '_'.join([f'{x:.2f}' for x in pose])
     return f'{base}.png'
 

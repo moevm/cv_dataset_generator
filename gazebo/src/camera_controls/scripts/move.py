@@ -6,7 +6,6 @@ from tf.transformations import quaternion_from_euler
 from gazebo_msgs.srv import SetModelState
 from gazebo_msgs.msg import ModelState
 from geometry_msgs.msg import Quaternion, Point
-from math import radians
 
 
 def move_client(model_name, position, orientation):
@@ -20,7 +19,6 @@ def move_client(model_name, position, orientation):
 
         state.pose.position = Point(*position)
 
-        orientation = map(radians, orientation)
         state.pose.orientation = Quaternion(*quaternion_from_euler(*orientation))
 
         return sms(state)
