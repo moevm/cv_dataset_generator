@@ -69,3 +69,16 @@ rosrun camera_controls trajectory.sh [trajectory]
 ```bash
 rosrun dataset_generator trajectory_generator.py curve 1 2
 ```
+
+## Визуализация траектории
+
+Визуализация траектории в Gazebo (отображается только в GUI, не видна на снимках виртуальной камеры):
+
+```bash
+rosrun dataset_generator trajectory_visualizer [trajectory]
+```
+
+Удаление визуализации:
+```bash
+gz marker -x
+```
