@@ -6,7 +6,8 @@ from math import pi
 def parse_args(argv):
     import argparse
 
-    common = argparse.ArgumentParser(description='Trajectory generator.', add_help=False)
+    common = argparse.ArgumentParser(
+        description='Trajectory generator.', add_help=False)
     common.add_argument('-s', '--seed', type=int, nargs='?', default=42,
                         help='random seed')
     common.add_argument('-o', '--output', nargs='?',
@@ -29,6 +30,8 @@ def parse_args(argv):
     curve_parser.add_argument('R', type=float, help='outer circle radius')
     curve_parser.add_argument('-c', '--center', type=float, nargs='*', default=[0, 0, 0],
                               help='center 3D coordinates')
+    curve_parser.add_argument('-x', '--look-at', type=float, nargs='*', default=[0, 0, 0],
+                              help='camera "look at" center 3D coordinates')
     curve_parser.add_argument('-l', '--length', type=int, nargs='?', default=3,
                               help='number of points in trajectory')
     curve_parser.add_argument('-a', '--angle-delta', type=float, nargs='?', default=0,
@@ -51,9 +54,11 @@ def main(args):
     np.random.seed(args.seed)
 
     if args.mode == 'reference':
-        trajectory = reference_trajectory(args.reference, args.delta, args.angle_delta)
+        trajectory = reference_trajectory(
+            args.reference, args.delta, args.angle_delta)
     else:
-        trajectory = curve_trajectory(args.r, args.R, args.center, args.length, args.angle_delta)
+        trajectory = curve_trajectory(
+            args.r, args.R, args.center, args.look_at, args.length, args.angle_delta)
 
     if args.output is None:
         print_trajectory(trajectory)
@@ -88,7 +93,18 @@ def closed_curve(length, num=10):
     return angle, radius
 
 
-def curve_trajectory(r, R, center, trajectory_length, angle_delta):
+def curve_visualization(x, y, z):
+    """Plot a curve in 3D."""
+
+    import matplotlib.pyplot as plt
+    from mpl_toolkits.mplot3d import Axes3D
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.scatter3D(x, y, z)
+    plt.show()
+
+
+def curve_trajectory(r, R, center, look_at, trajectory_length, angle_delta):
     """Generate closed curve trajectory in a given range of distance [r, R] from center."""
 
     # Generate random closed curve
@@ -108,22 +124,29 @@ def curve_trajectory(r, R, center, trajectory_length, angle_delta):
     scaled_distance = (distance - middle) * radius_scale + scaled_middle
     xyz *= scaled_distance / distance
 
-    # Translate all points to the given center
-    xyz += np.array(center)
-    x, y, z = np.vsplit(xyz, 3)
-    x, y, z = x.flatten(), y.flatten(), z.flatten()
-
-    # import matplotlib.pyplot as plt
-    # from mpl_toolkits.mplot3d import Axes3D
-    # fig = plt.figure()
-    # ax = plt.axes(projection='3d')
-    # ax.scatter3D(x, y, z)
-    # plt.show()
-
     # Calculate angles looking in the center with random noise
-    roll = np.zeros_like(x) + np.random.uniform(-angle_delta, angle_delta, x.shape)
-    yaw = np.arctan2(-y, -x) + np.random.uniform(-angle_delta, angle_delta, x.shape)
-    pitch = np.arcsin(z / scaled_distance) + np.random.uniform(-angle_delta, angle_delta, x.shape)
+    look_at = np.array(look_at) - np.array(center)
+    xyz_relative = xyz - np.array(look_at).reshape(3, 1)
+    distance_relative = np.linalg.norm(xyz_relative, axis=0)
+    x_relative, y_relative, z_relative = map(
+        lambda s: s.flatten(), np.vsplit(xyz_relative, 3))
+
+    roll = np.zeros_like(x_relative) + \
+        np.random.uniform(-angle_delta, angle_delta, x_relative.shape)
+    yaw = np.arctan2(-y_relative, -x_relative) + np.random.uniform(-angle_delta,
+                                                                   angle_delta, x_relative.shape)
+    pitch = np.arcsin(z_relative / distance_relative) + \
+        np.random.uniform(-angle_delta, angle_delta, x_relative.shape)
+
+    # Translate all points to the given center
+    center_x, center_y, center_z = center
+    x, y, z = map(lambda s: s.flatten(), np.vsplit(xyz, 3))
+    x += center_x
+    y += center_y
+    z += center_z
+
+    # Visualize the curve
+    # curve_visualization(x, y, z)
 
     return list(zip(x, y, z, roll, pitch, yaw))
 

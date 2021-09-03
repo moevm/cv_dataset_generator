@@ -58,7 +58,7 @@ rosrun camera_controls trajectory.sh [trajectory]
 
 ## Генератор траекторий
 
-Генератор траекторий лежит в `src/dataset_generator/src/trajectory_generator.py`. Поддерживаются два режима:
+Генератор траекторий лежит в `src/dataset_generator/src/generate.py`. Поддерживаются два режима:
 - `reference` — генерация траектории, близкой к референсной
 - `curve` — генерация замкнутой кривой вокруг центра в заданном диапазоне расстояния
 
@@ -67,7 +67,7 @@ rosrun camera_controls trajectory.sh [trajectory]
 Пример генерации траектории:
 
 ```bash
-rosrun dataset_generator trajectory_generator.py curve 1 2
+rosrun dataset_generator generate.py curve 1 2
 ```
 
 ## Визуализация траектории
@@ -75,7 +75,7 @@ rosrun dataset_generator trajectory_generator.py curve 1 2
 Визуализация траектории в Gazebo (отображается только в GUI, не видна на снимках виртуальной камеры):
 
 ```bash
-rosrun dataset_generator trajectory_visualizer [trajectory]
+rosrun dataset_generator visualize [trajectory]
 ```
 
 Удаление визуализации:
