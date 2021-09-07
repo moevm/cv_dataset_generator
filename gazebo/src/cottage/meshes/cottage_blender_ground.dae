@@ -58,13 +58,23 @@
             </accessor>
           </technique_common>
         </source>
+        <source id="Plane_004-mesh-map-0">
+          <float_array id="Plane_004-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane_004-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
         <vertices id="Plane_004-mesh-vertices">
           <input semantic="POSITION" source="#Plane_004-mesh-positions"/>
         </vertices>
         <triangles material="ground-material" count="2">
           <input semantic="VERTEX" source="#Plane_004-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Plane_004-mesh-normals" offset="1"/>
-          <p>1 0 2 0 0 0 1 0 3 0 2 0</p>
+          <input semantic="TEXCOORD" source="#Plane_004-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
         </triangles>
       </mesh>
     </geometry>
@@ -77,6 +87,7 @@
           <bind_material>
             <technique_common>
               <instance_material symbol="ground-material" target="#ground-material"/>
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
