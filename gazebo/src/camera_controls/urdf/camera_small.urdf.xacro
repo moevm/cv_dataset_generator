@@ -14,8 +14,8 @@
       <update_rate>30.0</update_rate>
       <camera name="head">
         <image>
-          <width>1440</width>
-          <height>1080</height>
+          <width>640</width>
+          <height>480</height>
           <format>R8G8B8</format>
         </image>
         <clip>
@@ -39,10 +39,10 @@
         </distortion>
         <lens>
           <intrinsics>
-            <fx>760.682294995</fx>
-            <fy>760.444156466</fy>
-            <cx>703.218127103</cx>
-            <cy>520.34225819</cy>
+            <fx>338.08101999764006</fx>
+            <fy>337.9751806514881</fy>
+            <cx>312.541389823373</cx>
+            <cy>231.26322586234303</cy>
           </intrinsics>
         </lens>
       </camera>
@@ -61,8 +61,8 @@
         <distortionK3>0.0</distortionK3>
         <distortionT1>-0.0009007345776965652</distortionT1>
         <distortionT2>0.001687799357074066</distortionT2>
-        <Cx>703.218127103</Cx>
-        <Cy>520.34225819</Cy>
+        <Cx>312.541389823373</Cx>
+        <Cy>231.26322586234303</Cy>
       </plugin>
     </sensor>
 
