@@ -20,7 +20,7 @@
   </link>
   
   <gazebo reference="cottage_blender_ground_link">
-    <material>cottage_texture</material>
+    <material>grass</material>
   </gazebo>
 
   <gazebo> <static>true</static></gazebo>

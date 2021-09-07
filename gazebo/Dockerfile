@@ -17,6 +17,7 @@ RUN . /opt/ros/noetic/setup.sh && \
     catkin_init_workspace /catkin_ws/src 
 
 ADD src /catkin_ws/src
+ADD src/cottage/media /usr/share/gazebo-11/media
 
 RUN . /opt/ros/noetic/setup.sh && \
     catkin_make

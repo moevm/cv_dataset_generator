@@ -13,9 +13,9 @@
   </include>
   <include file="$(find cottage)/launch/spawn_cottage_blender_Cube.launch" />
   <include file="$(find cottage)/launch/spawn_cottage_blender_ground.launch" />
-  <include file="$(find cottage)/launch/spawn_cottage_blender_light_1.launch" />
+  <!-- <include file="$(find cottage)/launch/spawn_cottage_blender_light_1.launch" />
   <include file="$(find cottage)/launch/spawn_cottage_blender_light_2.launch" />
-  <include file="$(find cottage)/launch/spawn_cottage_blender_light_3.launch" />
+  <include file="$(find cottage)/launch/spawn_cottage_blender_light_3.launch" /> -->
 
   <include file="$(find camera_controls)/launch/spawn_camera.launch" />
   
