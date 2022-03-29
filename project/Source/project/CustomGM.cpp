@@ -30,6 +30,13 @@ void ACustomGM::DeleteDevice(ABaseDevice* Device_)
 	}
 }
 
+int64 ACustomGM::GetTimeStamp()
+{
+	FDateTime Time = FDateTime::Now();
+	int64 Timestamp = Time.ToUnixTimestamp();
+	return Timestamp;
+}
+
 TArray<ABaseDevice*> ACustomGM::GetDeviceArray()
 {
 	return this->DeviceArrayAll;

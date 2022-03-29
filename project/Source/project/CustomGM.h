@@ -25,6 +25,8 @@ public:
 		ABaseDevice* FindDeviceByName(FString DeviceName_);
 	UFUNCTION(BlueprintCallable, Category = "CustomGM_Category")
 		void DeleteDevice(ABaseDevice* Device_);
+	UFUNCTION(BlueprintCallable, Category = "CustomGM_Category")
+		int64 GetTimeStamp();
 
 private:
 	TArray<ABaseDevice*> DeviceArrayAll;
