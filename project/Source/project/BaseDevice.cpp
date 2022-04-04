@@ -14,7 +14,9 @@ ABaseDevice::ABaseDevice()
 	RootComponent = Root;
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SM_Lamp_Wall"));
-	Mesh->AttachTo(Root);
+	Mesh->SetupAttachment(Root);
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> BaseMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Lamp_Wall.SM_Lamp_Wall'"));
+	Mesh->SetStaticMesh(BaseMeshAsset.Object);
 
 	this->DeviceName = this->DeviceNameStart;
 }
@@ -61,5 +63,25 @@ void ABaseDevice::SetDeviceType(FString DeviceType_)
 FString ABaseDevice::GetDeviceType()
 {
 	return this->DeviceType;
+}
+
+FVector ABaseDevice::GetPreviousLocation()
+{
+	return this->PreviousLocation;
+}
+
+void ABaseDevice::SetPreviousLocation(FVector Location)
+{
+	this->PreviousLocation = Location;
+}
+
+int64 ABaseDevice::GetPreviousTime()
+{
+	return this->PreviousTime;
+}
+
+void ABaseDevice::SetPreviousTime(int64 Time)
+{
+	this->PreviousTime = Time;
 }
 

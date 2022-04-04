@@ -7,6 +7,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "CustomGM.generated.h"
 
+
 /**
  * 
  */
@@ -27,6 +28,8 @@ public:
 		void DeleteDevice(ABaseDevice* Device_);
 	UFUNCTION(BlueprintCallable, Category = "CustomGM_Category")
 		int64 GetTimeStamp();
+	UFUNCTION(BlueprintCallable, Category = "CustomGM_Category")
+		void GetDataForDataset(ABaseDevice* Device, FString TimestampStr, int64 TimestampInt, FString ImageName, FString DatasetDir = "DefaultDataset");
 
 private:
 	TArray<ABaseDevice*> DeviceArrayAll;

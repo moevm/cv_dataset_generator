@@ -43,6 +43,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
 		FString GetDeviceType();
 
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		FVector GetPreviousLocation();
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		void SetPreviousLocation(FVector Location);
+
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		int64 GetPreviousTime();
+	UFUNCTION(BlueprintCallable, Category = "BaseDevice_Category")
+		void SetPreviousTime(int64 Time);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -51,5 +61,8 @@ private:
 	bool isActive = false;
 	FString DeviceName;
 	FString DeviceType = "None";
+
+	FVector PreviousLocation;
+	int64 PreviousTime = 0;
 };
 
