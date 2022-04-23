@@ -3,6 +3,7 @@
 
 #include "CustomGM.h"
 
+
 void ACustomGM::AddDeviceToArray(ABaseDevice* Device_)
 {
 	this->DeviceArrayAll.Add(Device_);

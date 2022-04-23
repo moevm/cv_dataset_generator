@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "BaseCamera.h"
 #include "GameFramework/GameModeBase.h"
+#include "UObject/ConstructorHelpers.h"
 #include "CustomGM.generated.h"
 
 
@@ -17,6 +18,7 @@ class PROJECT_API ACustomGM : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+
 	UFUNCTION(BlueprintCallable, Category = "CustomGM_Category")
 		TArray<ABaseDevice*> GetDeviceArray();
 
